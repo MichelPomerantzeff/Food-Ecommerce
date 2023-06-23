@@ -1,0 +1,13 @@
+*{
+  margin: 0;
+}
+
+:root{
+  --main_color: green;
+  --light_border: #e4e3e3
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: var(--main_color);
+  top: 180px;
+}
