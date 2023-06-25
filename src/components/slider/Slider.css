@@ -1,6 +1,6 @@
 .slider-wrapper{
     width: 1200px;
-    margin: 50px auto;
+    margin: 80px auto;
 }
 
 .slider-heading-wrapper{
@@ -15,10 +15,18 @@
     align-items: center;
     gap: 20px;
     padding: 20px 0;
+    font-size: .8rem;
 }
 
 .slider-heading a{
     color: var(--main_color);
+    text-decoration: none;
+    font-size: .7rem;
+}
+
+.slider-heading a:hover{
+    color: var(--main_color);
+    text-decoration: underline;
 }
 
 .slider-buttons{
@@ -59,11 +67,12 @@
     overflow: hidden;
 }
 
-.slider-item:hover .slider-image img {
+.slider-item:hover img {
     transform: scale(1.1);
+    
 }
 
-.slider-image{
+.slide-image{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,16 +80,25 @@
     height: 350px;
 }
 
-.slider-image img{
+.slide-image img{
     transition: .3s ease;
 }
 
-.slider-item-description{
+.slide-item-description{
     padding: 20px;
     flex: 1;
 }
 
-.slider-item-bottom-line{
+.slide-item-description h2{
+    font-size: 1.1rem;
+}
+
+.slide-item-description .slide-item-info{
+    font-size: .8rem;
+    color: gray;
+}
+
+.slide-item-bottom-line{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,6 +117,12 @@
     justify-content: end;
 }
 
+.manage-added-items{
+    display: flex;
+    align-items: center;
+    flex: 1.2;
+}
+
 .add-button{
     flex: 1;
     /* border: solid 1px; */
@@ -108,7 +132,7 @@
     width: 100%;
     border: solid 2px var(--main_color);
     border-radius: 5px;
-    padding: 5px;
+    padding: 8px;
     color: var(--main_color);
     transition: .2s;
 }
@@ -119,6 +143,32 @@
     cursor: pointer;
 }
 
-.slider-item-bottom-line{
+.remove-button{
+    flex: 1;
+}
+
+.remove-button button{
+    width: 100%;
+    border: solid 2px var(--main_color);
+    border-radius: 5px;
+    padding: 8px;
+    color: var(--main_color);
+    transition: .2s;
+}
+
+.remove-button button:hover{
+    background: var(--main_color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.item-qnt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.slide-item-bottom-line{
     padding: 50px 20px 20px 20px;
 }

@@ -1,8 +1,16 @@
-.specials {
+.specials{
+    width: 1200px;
+    margin: auto;
+}
+
+.specials-title{
+    padding: 20px 10px;
+}
+
+.specials-wrapper {
     display: flex;
     justify-content: center;
     gap: 60px;
-    padding: 50px 0;
     /* border: solid 1px red; */
 }
 
