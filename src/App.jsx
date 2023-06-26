@@ -1,4 +1,5 @@
 import "./App.css";
+import Bag from "./components/bag/Bag";
 import Banner from "./components/banner/Banner";
 import HealthyOption from "./components/healthy-option/HealthyOption";
 import Navbar from "./components/navbar/Navbar";
@@ -8,8 +9,12 @@ import { dishes } from "./data";
 
 function App() {
   return (
-    <>
+    <main className="app">
       <Navbar />
+      {/* <Bag/> */}
+
+
+      
       {/* <HealthyOption /> */}
       <Banner/>
       <Specials />
@@ -18,7 +23,7 @@ function App() {
       <Slider title={"PASTA"} dish={dishes.pasta}/>
       <Slider title={"VEGETARIAN"} dish={dishes.vegetarian}/>
       <Slider title={"FISH"} dish={dishes.fish}/>
-    </>
+    </main>
   );
 }
 

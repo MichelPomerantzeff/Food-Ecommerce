@@ -11,20 +11,17 @@ import "./Navbar.css";
 export default function Navbar() {
   return (
     <>
-      <div className="topbar-margin-top">
-        <div className="topbar-container">
-          <div className="offer-highlight">
-            Great Deal! Free delivery for orders over €50
-          </div>
+      <section className="topbar-container">
+          <div className="offer-highlight"> Great Deal! Free delivery for orders over €50 </div>
 
           <div className="navbar">
             <h1 className="logo">THE ONE</h1>
 
             <div className="nav-links">
-              <a href="">
+              <a>
                 <span>About</span>
               </a>
-              <a href="">
+              <a>
                 <span>Menu</span>
               </a>
             </div>
@@ -39,8 +36,7 @@ export default function Navbar() {
               <FontAwesomeIcon className="bag-icon" icon={faBagShopping} />
             </div>
           </div>
-        </div>
-      </div>
+      </section>
     </>
   );
 }

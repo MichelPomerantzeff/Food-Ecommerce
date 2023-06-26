@@ -27,7 +27,7 @@ export default function Slider(props) {
         <div className="slider-heading-wrapper">
           <div className="slider-heading">
             <h2>{props.title}</h2>
-            <a href="">SHOW ALL</a>
+            <a>SHOW ALL</a>
           </div>
           {props.dish.length > 2 && (
             <div className="slider-buttons">

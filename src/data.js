@@ -10,7 +10,7 @@ export const dishes = {
     chicken: [
         { id: "2.1", title: "Creamy chicken", info: "Whole meal rice and beans", price: "10.50", image: "./images/menu/dishes/chicken/with-rice-beans.png", weight: "310g", units: "" },
         { id: "2.2", title: "Chicken with peanut and lemon pepper", info: "Low carb mashed pumpkin", price: "13.90", image:"./images/menu/dishes/chicken/with-peanut.png", weight: "220g", units: "" },
-        { id: "2.3", title: "Creamy chicken", info: "Whole meal rice with almonds and brocolli + pumpkin slices and coconut oil", price: "12.50", image:"./images/menu/dishes/chicken/pumpkin-chicken.png", weight: "330g", units: "" },
+        { id: "2.3", title: "Creamy chicken", info: "Whole meal rice with almonds and brocolli + pumpkin slices", price: "12.50", image:"./images/menu/dishes/chicken/pumpkin-chicken.png", weight: "330g", units: "" },
         { id: "2.4", title: "Creamy chicken", info: "Cauliflower rice with carots and nuts ", price: "10.90", image:"./images/menu/dishes/chicken/creamy-chicken.png", weight: "250g", units: "" },
         { id: "2.5", title: "Chicken with lemon and mint", info: "Jasmin rice with onion rings and nuts", price: "11.50", image:"./images/menu/dishes/chicken/with-lemon.png", weight: "210g", units: "" }
     ],

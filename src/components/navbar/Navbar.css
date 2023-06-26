@@ -1,31 +1,36 @@
-.topbar-margin-top{
-    margin-bottom: 110px;
-}
-
 .topbar-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    margin-bottom: 80px;
+    position: relative;
+    margin-bottom: 100px;
 }
 
 
 .offer-highlight {
-    background: var(--main_color);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     color: #fff;
-    padding: 4px;
-    text-align: center;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    background: var(--main_color);
 }
 
 .navbar {
-    box-shadow: 1px 1px 4px gray;
+    position: fixed;
+    top: 25px;
+    left: 0;
+    right: 0;
+    height: 75px;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 25px;
     background: #fff;
+    border-bottom: solid 1px var(--light_border);
+
 }
 
 .logo {
@@ -48,6 +53,7 @@
     border-radius: 10px;
     font-weight: bold;
     font-size: .9rem;
+    cursor: pointer;
 }
 
 .nav-links > a:hover {
