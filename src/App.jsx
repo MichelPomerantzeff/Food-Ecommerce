@@ -1,4 +1,5 @@
 import "./App.css";
+import SignIn from "./components/signs/SignIn";
 import Bag from "./components/bag/Bag";
 import Banner from "./components/banner/Banner";
 import HealthyOption from "./components/healthy-option/HealthyOption";
@@ -11,18 +12,16 @@ function App() {
   return (
     <main className="app">
       <Navbar />
-      {/* <Bag/> */}
-
-
-      
+      <SignIn/>
       {/* <HealthyOption /> */}
+      {/* <Bag/>      
       <Banner/>
       <Specials />
       <Slider title={"CHICKEN"} dish={dishes.chicken}/>
       <Slider title={"BEEF"} dish={dishes.beef}/>
       <Slider title={"PASTA"} dish={dishes.pasta}/>
       <Slider title={"VEGETARIAN"} dish={dishes.vegetarian}/>
-      <Slider title={"FISH"} dish={dishes.fish}/>
+      <Slider title={"FISH"} dish={dishes.fish}/> */}
     </main>
   );
 }

@@ -95,4 +95,7 @@ export const banner = [
     {id: "15.4", title: "Four", image: "./images/banner/four.png"}
 ]
 
+export const signInBg = "./images/signs/sign-in-bg.png"
+export const signUpBg = "./images/signs/sign-up-bg.png"
+
 export const test = "./images/6.png"

@@ -15,7 +15,7 @@ export default function Navbar() {
           <div className="offer-highlight"> Great Deal! Free delivery for orders over €50 </div>
 
           <div className="navbar">
-            <h1 className="logo">THE ONE</h1>
+            <h1 className="logo">LOGO</h1>
 
             <div className="nav-links">
               <a>

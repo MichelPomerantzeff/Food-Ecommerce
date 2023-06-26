@@ -1,0 +1,106 @@
+.sign-in{
+    height: calc(100vh - 100px);
+    display: flex;
+}
+
+.sign-in-left{
+    /* border: solid 1px red; */
+    flex: 1;
+    margin: auto;
+}
+
+.sign-in-wrapper{
+    width: 380px;
+    margin: auto;
+    /* border: solid 1px red; */
+}
+
+.sign-in-wrapper h1{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.sign-in-wrapper form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+.inputs-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inputs-wrapper input {
+    border: none;
+    border-bottom: solid 2px var(--light_border);
+    outline: none;
+    padding: 10px;
+}
+
+.inputs-wrapper input:hover {
+    border-bottom: solid 2px gray;
+}
+
+.inputs-wrapper input:focus {
+    border-bottom: solid 2px gray;
+}
+
+.buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buttons-wrapper button{
+    padding: 15px;
+}
+
+.sign-in-btn {
+    background: var(--light_border);
+    border: solid 2px var(--light_border);
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.sign-in-btn:hover {
+    background: lightgray;
+}
+
+.create-account-btn {
+    border: solid 2px var(--main_color);
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--main_color);
+}
+
+.create-account-btn:hover {
+    background: var(--main_color);
+    color: #fff;
+}
+
+.sign-in-wrapper form a{
+    text-align: center;
+    color: var(--main_color);
+    cursor: pointer;
+}
+
+.sign-in-wrapper form a:hover{
+    text-decoration: underline;
+}
+
+.sign-in-right{
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-in-right img{
+    width: 100%;
+}
