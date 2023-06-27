@@ -1,3 +1,15 @@
+:root{
+  --main_color: #3C99DC;
+  --light_border: #e4e3e3;
+  --background: #f0ece1;
+
+  /* HOVER */
+  --darker_main_color: #246a9c;
+
+  /* TEXT */
+  --text_color: #000;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -5,17 +17,7 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-:root{
-  --main_color: #3C99DC;
-  --light_border: #e4e3e3;
-  --background: #f0ece1;
-
-
-  /* HOVER */
-  --darker_main_color: #246a9c;
-}
-
-.swiper-button-next, .swiper-button-prev {
-  color: var(--main_color);
-  top: 180px;
+a {
+  color: var(--text_color);
+  text-decoration: none;
 }

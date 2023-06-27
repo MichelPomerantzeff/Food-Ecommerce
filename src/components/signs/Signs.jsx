@@ -2,7 +2,7 @@ import React from "react";
 import { signInBg } from "../../data";
 import "./Signs.css";
 
-export default function SignIn() {
+export default function Signs() {
   return (
     <section className="sign-in">
       <div className="sign-in-left">

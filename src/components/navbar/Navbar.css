@@ -30,53 +30,52 @@
     justify-content: space-between;
     background: #fff;
     border-bottom: solid 1px var(--light_border);
-
 }
 
 .logo {
-    flex: .3;
-    display: flex;
+    font-size: 2rem;
 }
 
-.nav-links {
-    flex: 2;
+.navbar-side {
+    flex: 1;
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 50px;
+    padding: 0 50px;
 }
 
-.nav-links > a {
-    display: flex;
-    gap: 5px;
-    text-decoration: none;
-    color: #000;
+.nav-left {
+    justify-content: start;
+}
+
+.about-link,
+.menu-link {
+    font-weight: bold;
     padding: 10px 20px;
     border-radius: 10px;
-    font-weight: bold;
-    font-size: .9rem;
-    cursor: pointer;
 }
 
-.nav-links > a:hover {
+.about-link:hover,
+.menu-link:hover {
     background: var(--background);
-    cursor: pointer;
+    text-decoration: underline;
 }
 
-.log-in {
-    flex: .3;
-    display: flex;
-}
-
-.log-in-wrapper{
+.log-in-icon-wrapper {
     padding: 5px 20px;
     border-radius: 10px;
 }
 
-.log-in-wrapper:hover{
-    background: var(--background);
-    cursor: pointer;
+.log-in-icon-wrapper:hover {
+    background: var(--background);    
 }
 
-.log-in-icon{
+
+.nav-right {
+    justify-content: end;
+}
+
+.log-in-icon {
     border-radius: 50%;
     border: solid 2px;
     padding: 3px 4px;
@@ -86,13 +85,9 @@
     transform: scale(.8);
 }
 
-.bag {
-    flex: .3;
-    display: flex;
-    justify-content: center;
-}
+.bag {}
 
-.bag-icon{
+.bag-icon {
     transform: scale(1.3);
     color: #fff;
     background: var(--main_color);
@@ -100,7 +95,7 @@
     border-radius: 20px;
 }
 
-.bag-icon:hover{
+.bag-icon:hover {
     background: var(--darker_main_color);
     cursor: pointer;
 }
