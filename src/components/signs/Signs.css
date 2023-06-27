@@ -1,36 +1,42 @@
-.sign-in{
+.sign{
     height: calc(100vh - 100px);
     display: flex;
 }
 
-.sign-in-left{
+.sign-left{
     /* border: solid 1px red; */
     flex: 1;
     margin: auto;
 }
 
-.sign-in-wrapper{
+.sign-wrapper{
     width: 380px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
     /* border: solid 1px red; */
 }
 
-.sign-in-wrapper h1{
-    text-align: center;
+.sign-wrapper h1{
     font-size: 1.2rem;
+    width: 100%;
 }
 
-.sign-in-wrapper form{
+.sign-wrapper form{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 50px 20px;
+    width: 100%;
 }
 
 .inputs-wrapper {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
 }
 
 .inputs-wrapper input {
@@ -52,13 +58,16 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
 }
 
 .buttons-wrapper button{
+    width: 100%;
     padding: 15px;
+    font-weight: bold;
 }
 
-.sign-in-btn {
+.sign-btn {
     background: var(--light_border);
     border: solid 2px var(--light_border);
     border-radius: 5px;
@@ -67,33 +76,33 @@
     outline: none;
 }
 
-.sign-in-btn:hover {
+.sign-btn:hover {
     background: lightgray;
 }
 
-.create-account-btn {
+.existing-account-btn, .create-account-btn {
     border: solid 2px var(--main_color);
     border-radius: 5px;
     cursor: pointer;
     color: var(--main_color);
 }
 
-.create-account-btn:hover {
+.existing-account-btn:hover, .create-account-btn:hover {
     background: var(--main_color);
     color: #fff;
 }
 
-.sign-in-wrapper form a{
+.sign-wrapper form a{
     text-align: center;
     color: var(--main_color);
     cursor: pointer;
 }
 
-.sign-in-wrapper form a:hover{
+.sign-wrapper form a:hover{
     text-decoration: underline;
 }
 
-.sign-in-right{
+.sign-right{
     flex: 1;
     overflow: hidden;
     display: flex;
@@ -101,6 +110,6 @@
     justify-content: center;
 }
 
-.sign-in-right img{
+.sign-right img{
     width: 100%;
 }

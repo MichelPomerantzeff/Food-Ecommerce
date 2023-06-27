@@ -33,7 +33,7 @@ export default function Navbar() {
           </div>
 
           <div className="navbar-side nav-right">
-            <Link className="log-in-icon-wrapper" to={"/signin"}>
+            <Link className="log-in-icon-wrapper" to={"/sign-in"}>
               <FontAwesomeIcon className="log-in-icon" icon={faUser} />
             </Link>
 

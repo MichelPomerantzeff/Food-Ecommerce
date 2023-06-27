@@ -1,35 +1,50 @@
 import React from "react";
-import { signInBg } from "../../data";
+import { signInBg, signUpBg } from "../../data";
 import "./Signs.css";
+import { Link } from "react-router-dom";
 
-export default function Signs() {
+export default function Signs(props) {
+
+  const isRegister = props.type === 'sign-up'
+
   return (
-    <section className="sign-in">
-      <div className="sign-in-left">
-        <div className="sign-in-wrapper">
+    <section className="sign">
+      
+      <div className="sign-left">
+        <div className="sign-wrapper">
 
-          <h1>LOGIN OR CREATE AN ACCOUNT</h1>
+          <h1> { isRegister ? "CREATE AN ACCOUNT AND LET'S GET STARTED" : "SIGN IN" } </h1>
           
           <form>
             <div className="inputs-wrapper">
-              <input type="text" name="" id="" placeholder="Name" required/>
+              { isRegister && <input type="text" name="" id="" placeholder="Name" required/>}
               <input type="email" name="" id="" placeholder="Email" required/>
               <input type="password" name="" id="" placeholder="Password" required/>
+              { isRegister && <input type="password" name="" id="" placeholder="Confirm password" required/>}
             </div>
-
-            <div className="buttons-wrapper">
-              <button className="sign-in-btn" type="submit">Sign in</button>
-              <button className="create-account-btn">Create account</button>
-            </div>
-
-            <a>Forgot password?</a>
           </form>
+
+          <div className="buttons-wrapper">
+            <button className="sign-btn" type="submit">{ isRegister ? "CREATE" : "SIGN IN"}</button>
+            {
+              isRegister ?
+              <Link to={'/sign-in'}>
+                <button className="existing-account-btn">I ALREADY HAVE AN ACCOUNT</button>
+              </Link>
+              :
+              <Link to={'/sign-up'}>
+                <button className="create-account-btn">CREATE ACCOUNT</button>
+              </Link>
+            }
+          </div>
+
+          { !isRegister && <a>Forgot password?</a>}
 
         </div>
       </div>
 
-      <div className="sign-in-right">
-        <img src={signInBg} alt="SIGN IN IMAGE" />
+      <div className="sign-right">
+        <img src={isRegister ? signUpBg : signInBg} alt="SIGN IMAGE" />
       </div>
     </section>
   );

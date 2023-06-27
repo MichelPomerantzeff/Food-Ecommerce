@@ -2,11 +2,11 @@ import React from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Signs from "../../components/signs/Signs";
 
-export default function Login() {
+export default function Login(props) {
   return (
     <>
       <Navbar />
-      <Signs />
+      <Signs type={props.type}/>
     </>
   );
 }

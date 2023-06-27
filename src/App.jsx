@@ -16,6 +16,7 @@ import {
 } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Login from "./pages/signin/Login";
+import Register from "./pages/signup/Register";
 
 function App() {
 
@@ -28,8 +29,12 @@ function App() {
       element: < Home/>,
     },
     {
-      path: "signin",
-      element: < Login/>,
+      path: "sign-in",
+      element: < Login type={'sign-in'}/>,
+    },
+    {
+      path: "sign-up",
+      element: < Register type={'sign-up'}/>,
     },
   ]);
 
