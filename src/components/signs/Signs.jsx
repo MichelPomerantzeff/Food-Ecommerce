@@ -17,10 +17,10 @@ export default function Signs(props) {
           
           <form>
             <div className="inputs-wrapper">
-              { isRegister && <input type="text" name="" id="" placeholder="Name" required/>}
-              <input type="email" name="" id="" placeholder="Email" required/>
-              <input type="password" name="" id="" placeholder="Password" required/>
-              { isRegister && <input type="password" name="" id="" placeholder="Confirm password" required/>}
+              { isRegister && <input type="text" name="name" id="name" placeholder="Name" required/>}
+              <input type="email" name="email" id="email" placeholder="Email" required/>
+              <input type="password" name="pasword" id="pasword" placeholder="Password" required/>
+              { isRegister && <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm password" required/>}
             </div>
           </form>
 
