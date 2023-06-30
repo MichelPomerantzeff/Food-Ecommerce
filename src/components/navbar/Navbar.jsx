@@ -14,7 +14,7 @@ export default function Navbar() {
     <>
       <section className="topbar-container">
         <div className="offer-highlight">
-          Great Deal! Free delivery for orders over €50
+          Great Deal! Get 10% off for orders over €50
         </div>
 
         <div className="navbar">
