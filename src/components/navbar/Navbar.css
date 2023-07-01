@@ -62,14 +62,29 @@
 }
 
 .log-in-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
     padding: 5px 20px;
     border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
 }
 
 .log-in-icon-wrapper:hover {
     background: var(--background);    
 }
 
+.log-in-icon-wrapper:hover span {
+    text-decoration: underline;
+}
+
+.log-in-icon-wrapper:hover .dropdown-box{
+    opacity: 1;
+    visibility: visible;
+}
 
 .nav-right {
     justify-content: end;

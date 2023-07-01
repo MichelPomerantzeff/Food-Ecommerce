@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { signInBg } from "../../data";
 import '../../shared/UserLog.css'
 
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+
+
 export default function Login(props) {
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
+  const auth = getAuth();
+
+  const signIn = async (e) => {
+    e.preventDefault()
+    try {
+      const result = await signInWithEmailAndPassword(auth, email, password);
+      const user = result.user;
+      user && navigate('/')
+    } catch (error) {
+      alert(error.message)
+    }
+  }
+
   return (
     <>
       <Navbar />
@@ -17,15 +38,15 @@ export default function Login(props) {
           
           <form>
             <div className="inputs-wrapper">
-              <input type="email" name="email" id="email" placeholder="Email" required/>
-              <input type="password" name="pasword" id="pasword" placeholder="Password" required/>
+              <input onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email" placeholder="Email" required/>
+              <input onChange={(e) => setPassword(e.target.value)} type="password" name="pasword" id="pasword" placeholder="Password" required/>
             </div>
           </form>
 
           <div className="buttons-wrapper">
-            <button className="sign-btn" type="submit"> SIGN IN </button>
+            <button onClick={signIn} className="sign-btn" type="submit"> SIGN IN </button>
             <Link to={'/sign-up'}>
-              <button className="existing-account-btn">I ALREADY HAVE AN ACCOUNT</button>
+              <button className="existing-account-btn">CREATE ACCOUNT</button>
             </Link>
           </div>
 

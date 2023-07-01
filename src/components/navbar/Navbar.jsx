@@ -1,15 +1,22 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBagShopping,
-  faCircleInfo,
-  faListAlt,
-  faUser,
-} from "@fortawesome/free-solid-svg-icons";
-
+import { faBagShopping, faCircleInfo, faListAlt, faUser } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
+import "../../shared/Dropdown.css"
 import { Link } from "react-router-dom";
 
+import { useAuthState } from "react-firebase-hooks/auth"
+import { auth } from "../../config/firebase"
+import { signOut } from "firebase/auth";
+
 export default function Navbar() {
+
+  const [user] = useAuthState(auth)
+
+  //Log user out
+  function signUserOut() {
+    signOut(auth)
+  }
+  
   return (
     <>
       <section className="topbar-container">
@@ -33,10 +40,23 @@ export default function Navbar() {
           </div>
 
           <div className="navbar-side nav-right">
-            <Link className="log-in-icon-wrapper" to={"/sign-in"}>
-              <FontAwesomeIcon className="log-in-icon" icon={faUser} />
-            </Link>
+            {
+              user ?
+              <div className="log-in-icon-wrapper">
+                <FontAwesomeIcon className="log-in-icon" icon={faUser} />
+                <span>{user.displayName}</span>
 
+                <ul className="dropdown-box">
+                  <li className="dropdown-option"> Orders history </li>
+                  <li className="dropdown-option" onClick={signUserOut} > Sign out </li>
+                </ul>
+
+              </div>
+              :
+              <Link className="log-in-icon-wrapper" to={"/sign-in"}>
+                <span>Login</span>
+              </Link>
+            }
             <div className="bag">
               <FontAwesomeIcon className="bag-icon" icon={faBagShopping} />
             </div>
