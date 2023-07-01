@@ -5,12 +5,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark, faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import ItemInBag from "./ItemInBag";
 
-export default function Bag() {
+export default function Bag({closeBag}) {
+
   return (
     <section className="bag-page">
       <div className="bag-heading">
         <div className="items-qnt">3 items</div>
-        <button className="close-bag">
+        <button onClick={() => closeBag(false)} className="close-bag">
             <span>HIDE</span>
             <FontAwesomeIcon className="close-icon" icon={faCircleXmark} />
         </button>

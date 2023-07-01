@@ -17,7 +17,7 @@ export default function Slide(props) {
           <span className="slide-item-info">{props.dish.info}</span>
         </div>
         <div className="slide-item-bottom-line">
-          <span className="price">${props.dish.price}</span>
+          <span className="price">€{props.dish.price}</span>
           <span className="weight">{props.dish.weight}</span>
           <div className="manage-added-items">
             {itemQnt > 0 && (

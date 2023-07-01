@@ -14,7 +14,7 @@ export default function ItemInBag(props) {
           <span>{props.dish.info}</span>
         </div>
         <div className="item-in-bag-bottom-line">
-          <span>{props.dish.price}</span>
+          <span>€{props.dish.price}</span>
           <div className="item-in-bag-buttons">
             <button className="decrease-btn">
               <FontAwesomeIcon icon={faMinus} />

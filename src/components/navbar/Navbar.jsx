@@ -3,14 +3,17 @@ import { faBagShopping, faCircleInfo, faListAlt, faUser } from "@fortawesome/fre
 import "./Navbar.css";
 import "../../shared/Dropdown.css"
 import { Link } from "react-router-dom";
-
 import { useAuthState } from "react-firebase-hooks/auth"
 import { auth } from "../../config/firebase"
 import { signOut } from "firebase/auth";
+import Bag from "../bag/Bag";
+import { useState } from "react";
 
 export default function Navbar() {
 
-  const [user] = useAuthState(auth)
+  const [user] = useAuthState(auth);
+
+  const [isBagOpen, setIsBagOpen] = useState(false);
 
   //Log user out
   function signUserOut() {
@@ -19,6 +22,7 @@ export default function Navbar() {
   
   return (
     <>
+      {isBagOpen && <Bag closeBag={setIsBagOpen}/>}
       <section className="topbar-container">
         <div className="offer-highlight">
           Great Deal! Get 10% off for orders over €50
@@ -57,7 +61,7 @@ export default function Navbar() {
                 <span>Login</span>
               </Link>
             }
-            <div className="bag">
+            <div onClick={() => setIsBagOpen(true)} className="bag">
               <FontAwesomeIcon className="bag-icon" icon={faBagShopping} />
             </div>
           </div>
