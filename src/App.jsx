@@ -1,5 +1,4 @@
 import "./App.css";
-import SignIn from "./components/signs/Signs";
 import Bag from "./components/bag/Bag";
 import Banner from "./components/banner/Banner";
 import HealthyOption from "./components/healthy-option/HealthyOption";
@@ -30,11 +29,11 @@ function App() {
     },
     {
       path: "sign-in",
-      element: < Login type={'sign-in'}/>,
+      element: < Login/>,
     },
     {
       path: "sign-up",
-      element: < Register type={'sign-up'}/>,
+      element: < Register />,
     },
   ]);
 
