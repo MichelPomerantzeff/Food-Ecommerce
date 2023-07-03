@@ -8,12 +8,23 @@ import { auth } from "../../config/firebase"
 import { signOut } from "firebase/auth";
 import Bag from "../bag/Bag";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import Logo from "../logo/Logo";
 
 export default function Navbar() {
 
   const [user] = useAuthState(auth);
-
   const [isBagOpen, setIsBagOpen] = useState(false);
+  const bagItems = useSelector(state => state.bag);
+
+
+
+
+  const bagUnits = bagItems?.reduce((acc, cur) => {
+    return cur.units + acc
+  }, 0)
+
+
 
   //Log user out
   function signUserOut() {
@@ -30,8 +41,8 @@ export default function Navbar() {
 
         <div className="navbar">
           <div className="navbar-side nav-left">
-            <Link className="logo" to={"/"}>
-              LOGO
+            <Link to={"/"}>
+              <Logo/>
             </Link>
 
             <Link>
@@ -64,6 +75,7 @@ export default function Navbar() {
             <div onClick={() => setIsBagOpen(true)} className="bag">
               <FontAwesomeIcon className="bag-icon" icon={faBagShopping} />
             </div>
+              <span>{bagUnits}</span>
           </div>
 
         </div>

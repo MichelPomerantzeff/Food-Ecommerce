@@ -3,7 +3,7 @@ import Banner from "../../components/banner/Banner";
 import Specials from "../../components/specials/Specials";
 import Slider from "../../components/slider/Slider";
 import Navbar from "../../components/navbar/Navbar";
-import { dishes } from "../../data";
+import { dishes } from "../../data/data";
 
 export default function Home() {
   return (

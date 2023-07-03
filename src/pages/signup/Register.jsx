@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
-import { signUpBg } from "../../data";
+import { signUpBg } from "../../data/data";
 import { Link, useNavigate } from "react-router-dom";
 import '../../shared/UserLog.css'
 

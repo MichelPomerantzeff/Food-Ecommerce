@@ -1,4 +1,4 @@
-import { specials } from "../../data";
+import { specials } from "../../data/data";
 import "./Specials.css";
 
 export default function Specials() {

@@ -1,6 +1,6 @@
 import React from 'react'
 import './Banner.css'
-import { banner } from '../../data'
+import { banner } from '../../data/data'
 
 export default function Banner() {
   return (

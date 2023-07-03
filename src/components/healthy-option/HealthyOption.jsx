@@ -1,5 +1,5 @@
 import "./HealthyOption.css";
-import { test } from "../../data";
+import { test } from "../../data/data";
 
 export default function HealthyOption() {
   return (

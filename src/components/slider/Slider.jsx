@@ -11,8 +11,8 @@ import { useState } from "react";
 import Slide from "./Slide";
 
 export default function Slider(props) {
-  const [swiper, setSwiper] = useState(null);
   
+  const [swiper, setSwiper] = useState(null);
 
   const nexto = () => {
     swiper.slideNext();
