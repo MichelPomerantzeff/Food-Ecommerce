@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 import { useState } from "react";
-import Slide from "./Slide";
+import Dish from "./Dish";
 
 export default function Slider(props) {
   
@@ -50,7 +50,7 @@ export default function Slider(props) {
           {props.dish.map((d) => {
             return (
               <SwiperSlide key={d.id}>
-                <Slide dish={d}/>
+                <Dish dish={d}/>
               </SwiperSlide>
             );
           })}
