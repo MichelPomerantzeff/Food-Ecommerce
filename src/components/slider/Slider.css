@@ -64,6 +64,7 @@
 }
 
 .slider-item {
+    background: #fff;
     border: solid 1px var(--light_border);
     border-radius: 10px;
     overflow: hidden;
@@ -137,6 +138,7 @@
     padding: 8px;
     color: var(--main_color);
     transition: .2s;
+    font-weight: bold;
 }
 
 .add-button button:hover{

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Cart.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
@@ -11,10 +11,23 @@ export default function Cart({closeCart}) {
 
   const dispatch = useDispatch();
   const cartItems = useSelector(state => state.cart);
+  const [discount, setDiscount] = useState(0)
+
+  const subTotal = cartItems?.reduce((acc, cur) => {
+    return (cur.price * cur.units) + acc
+  }, 0)
 
   const cartUnits = cartItems?.reduce((acc, cur) => {
     return cur.units + acc
   }, 0)
+
+  useEffect(() => {
+    if(subTotal < 50) {
+      setDiscount(0)
+    }else {
+      setDiscount(subTotal*0.1)
+    }
+  }, [subTotal]);
 
   const clearCart = () => {
     dispatch((reset()))
@@ -61,15 +74,15 @@ export default function Cart({closeCart}) {
         <div className="order-details">
           <div className="order-detail-field">
             <span className="subtotal">Subtotal</span>
-            <span>9.99</span>
+            <span>€{subTotal.toFixed(2)}</span>
           </div>
           <div className="order-detail-field">
-            <span className="delivery-fee">Delivery</span>
-            <span>9.99</span>
+            <span className="delivery-fee">Discount</span>
+            <span>€{discount > 0 ? discount.toFixed(2) : 0}</span>
           </div>
           <div className="order-detail-field">
             <span className="total">Total</span>
-            <span>9.99</span>
+            <span>€{(subTotal - discount).toFixed(2)}</span>
           </div>
           <button className="payment-btn">Payment</button>
         </div>
