@@ -1,18 +1,24 @@
 import React, { useEffect } from "react";
 import "./Bag.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleXmark, faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 import ItemInBag from "./ItemInBag";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { emptyBox } from '../../data/data';
+import { reset } from "../../redux/features/bagSlice";
 
 export default function Bag({closeBag}) {
 
+  const dispatch = useDispatch();
   const bagItems = useSelector(state => state.bag);
 
   const bagUnits = bagItems?.reduce((acc, cur) => {
     return cur.units + acc
   }, 0)
+
+  const clearBag = () => {
+    dispatch((reset()))
+  }
 
   return (
     <section className="bag-page">
@@ -29,6 +35,11 @@ export default function Bag({closeBag}) {
         </button>
       </div>
       <div className="items-in-bag">
+
+        {
+          bagItems.length > 0 &&
+          <button className="remove-all" onClick={clearBag}>Remove all</button>
+        }
 
         {
           bagItems.length > 0 ?

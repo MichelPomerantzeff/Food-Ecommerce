@@ -6,14 +6,13 @@ export const bagSlice = createSlice({
     totalItems:{},
     reducers: {
         add: (state, action) => {
-            const isAddedItem = state.some(i => action.payload.id == i.id);
             const existingItem = state.find(i => action.payload.id == i.id);
-            if(isAddedItem) {
+            if(existingItem) {
                 existingItem.units++
                 state={...state, existingItem}
             } else {
-                action.payload.units++
-                state.push(action.payload);
+                const xxx = action.payload.units = 1
+                state.push({...action.payload, xxx});
             }
         },
         
@@ -28,9 +27,13 @@ export const bagSlice = createSlice({
             }
             
         },
+
+        reset: (state, action) => {
+            return [];
+        }
         
     },
 });
 
-export const { add, remove } = bagSlice.actions;
+export const { add, remove, reset } = bagSlice.actions;
 export default bagSlice.reducer;
