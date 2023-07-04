@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import { signUpBg } from "../../data/data";
 import { Link, useNavigate } from "react-router-dom";
-import '../../shared/UserLog.css'
+import '../../css/UserLog.css'
 
 import { auth } from "../../config/firebase"
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'

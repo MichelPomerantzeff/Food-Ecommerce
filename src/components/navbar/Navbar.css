@@ -44,6 +44,16 @@
     justify-content: start;
 }
 
+.menu-link-wrapper{
+    padding: 5px 20px;
+    position: relative;
+}
+
+.menu-link-wrapper:hover .dropdown-box{
+    opacity: 1;
+    visibility: visible;
+}
+
 .about-link,
 .menu-link {
     font-weight: bold;

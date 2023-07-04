@@ -82,9 +82,9 @@ export const wrappedUp = [
 
 export const specials = [
     { id: "14.1", title: "Snacks", price: 0, image: "./images/menu/snacks/savory/croissant.png", weight: "", units: 0 },
-    { id: "14.2", title: "Lunchbox", price: 0, image: "./images/menu/wrapped-up/mince.png", weight: "", units: 0 },
+    { id: "14.2", title: "Main course", price: 0, image: "./images/menu/dishes.png", weight: "", units: 0 },
     { id: "14.3", title: "Healthy options", price: 0, image: "./images/menu/healthy.png", weight: "", units: 0 },
-    { id: "14.4", title: "Full Meal", price: 0, image: "./images/menu/dishes.png", weight: "", units: 0 }
+    { id: "14.4", title: "Lunchbox", price: 0, image: "./images/menu/wrapped-up/mince.png", weight: "", units: 0 }
 ]
 
 

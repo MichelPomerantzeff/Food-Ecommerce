@@ -9,6 +9,7 @@ import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons
 
 import { useState } from "react";
 import Dish from "./Dish";
+import { Link } from "react-router-dom";
 
 export default function Slider(props) {
   
@@ -27,7 +28,7 @@ export default function Slider(props) {
         <div className="slider-heading-wrapper">
           <div className="slider-heading">
             <h2>{props.title}</h2>
-            <a>SHOW ALL</a>
+            <Link to={'/main-course'}>SHOW ALL</Link>
           </div>
           {props.dish.length > 2 && (
             <div className="slider-buttons">

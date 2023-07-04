@@ -17,6 +17,10 @@ import Home from "./pages/home/Home";
 import Login from "./pages/signin/Login";
 import Register from "./pages/signup/Register";
 import About from "./pages/about/About";
+import Snacks from "./pages/snacks/Snacks";
+import MainCourse from "./pages/main-course/MainCourse";
+import HealthyOptions from "./pages/healthy-options/HealthyOptions";
+import LunchBox from "./pages/lunch-box/LunchBox";
 
 function App() {
 
@@ -31,6 +35,22 @@ function App() {
     {
       path: "/about",
       element: < About/>,
+    },
+    {
+      path: "/snacks",
+      element: < Snacks/>,
+    },
+    {
+      path: "/main-course",
+      element: < MainCourse/>,
+    },
+    {
+      path: "/healthy-options",
+      element: < HealthyOptions/>,
+    },
+    {
+      path: "/lunch-box",
+      element: < LunchBox/>,
     },
     {
       path: "sign-in",
