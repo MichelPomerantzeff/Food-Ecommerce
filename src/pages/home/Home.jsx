@@ -4,6 +4,7 @@ import Specials from "../../components/specials/Specials";
 import Slider from "../../components/slider/Slider";
 import Navbar from "../../components/navbar/Navbar";
 import { dishes } from "../../data/data";
+import Footer from "../../components/footer/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Slider title={"PASTA"} dish={dishes.pasta} />
       <Slider title={"VEGETARIAN"} dish={dishes.vegetarian} />
       <Slider title={"FISH"} dish={dishes.fish} />
+      <Footer/>
     </>
   );
 }

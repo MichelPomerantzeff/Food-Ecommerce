@@ -1,0 +1,120 @@
+.footer-container {
+    background-color: #f1f1db;
+    color: #36395A;
+}
+
+.footer-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0;
+    width: 1200px;
+    margin: auto;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+.left{
+    justify-content: start;
+}
+
+.center{
+    justify-content: center;
+}
+
+.right{
+    justify-content: end;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.socials, .mobile-apps {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.icons-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.social-icon{
+    cursor: pointer;
+    list-style: none;
+}
+
+.facebook:hover{
+    color: #2856b9;
+}
+
+.instagram:hover{
+    color: #fa8e37;
+}
+
+.whatsapp:hover{
+    color: #25d366;
+}
+
+.twitter:hover{
+    color: #1DA1F2;
+}
+
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.downloadappwrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.downloadappimage:hover {
+    cursor: pointer;
+}
+
+.contactbox {
+    display: flex;
+    align-items: center;
+}
+
+.contacticon {
+    margin-right: 5px;
+}
+
+.text {
+}
+
+.copyright {
+    background-color: #f1f1db;
+    height: 60px;
+    font-size: 1rem;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 2px 0 gray;
+}
+
+.copyright strong {
+    text-decoration: underline;
+}

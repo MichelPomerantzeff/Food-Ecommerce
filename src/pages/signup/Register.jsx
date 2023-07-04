@@ -6,6 +6,7 @@ import '../../shared/UserLog.css'
 
 import { auth } from "../../config/firebase"
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
+import Footer from "../../components/footer/Footer";
 
 export default function Register() {
 
@@ -33,34 +34,32 @@ export default function Register() {
     <>
       <Navbar />
       <section className="sign">
-      
-      <div className="sign-left">
-        <div className="sign-wrapper">
+        <div className="sign-left">
+          <div className="sign-wrapper">
+            <h1> CREATE AN ACCOUNT AND LET'S GET STARTED </h1>
+            <form>
+              <div className="inputs-wrapper">
+                <input onChange={e => setName(e.target.value)} type="text" name="name" id="name" placeholder="Name" required/>
+                <input onChange={e => setEmail(e.target.value)} type="email" name="email" id="email" placeholder="Email" required/>
+                <input onChange={e => setPassword(e.target.value)} type="password" name="pasword" id="pasword" placeholder="Password" required/>
+                <input onChange={e => setConfirmPassword(e.target.value)} type="password" name="confirm-password" id="confirm-password" placeholder="Confirm password" required/>
+              </div>
+            </form>
 
-          <h1> CREATE AN ACCOUNT AND LET'S GET STARTED </h1>
-          
-          <form>
-            <div className="inputs-wrapper">
-              <input onChange={e => setName(e.target.value)} type="text" name="name" id="name" placeholder="Name" required/>
-              <input onChange={e => setEmail(e.target.value)} type="email" name="email" id="email" placeholder="Email" required/>
-              <input onChange={e => setPassword(e.target.value)} type="password" name="pasword" id="pasword" placeholder="Password" required/>
-              <input onChange={e => setConfirmPassword(e.target.value)} type="password" name="confirm-password" id="confirm-password" placeholder="Confirm password" required/>
+            <div className="buttons-wrapper">
+              <button onClick={registerWithEmail} className="sign-btn" type="submit"> CREATE </button>
+              <Link to={'/sign-in'}>
+                <button className="create-account-btn">I ALREADY HAVE AN ACCOUNT</button>
+              </Link>
             </div>
-          </form>
-
-          <div className="buttons-wrapper">
-            <button onClick={registerWithEmail} className="sign-btn" type="submit"> CREATE </button>
-            <Link to={'/sign-in'}>
-              <button className="create-account-btn">I ALREADY HAVE AN ACCOUNT</button>
-            </Link>
           </div>
         </div>
-      </div>
 
-      <div className="sign-right">
-        <img src={signUpBg} alt="REGISTER IMAGE" />
-      </div>
-    </section>
+        <div className="sign-right">
+          <img src={signUpBg} alt="REGISTER IMAGE" />
+        </div>
+      </section>
+      <Footer/>
     </>
   );
 }

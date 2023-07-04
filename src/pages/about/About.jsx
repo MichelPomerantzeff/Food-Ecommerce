@@ -2,6 +2,7 @@ import React from 'react'
 import './About.css'
 import Navbar from '../../components/navbar/Navbar'
 import { aboutImg } from '../../data/data'
+import Footer from '../../components/footer/Footer'
 
 export default function About() {
   return (
@@ -17,6 +18,7 @@ export default function About() {
             </div>
                 <img className='about-img' src={aboutImg} alt="" />
         </section>
+        <Footer/>
     </>
   )
 }
