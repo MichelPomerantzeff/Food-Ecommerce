@@ -1,12 +1,11 @@
 import React from 'react'
 import './Banner.css'
-import { banner } from '../../data/data'
 
-export default function Banner() {
+export default function Banner({banner}) {
   return (
     <div className="banner">
         <div className="banner-wrapper">
-            <img src={banner[0].image} alt="Banner Image" />
+            <img src={banner} alt="Banner Image" />
         </div>
     </div>
   )

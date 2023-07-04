@@ -53,15 +53,15 @@ export default function Navbar() {
               <span className="about-link">About</span>
             </Link>
 
-            <di className="menu-link-wrapper">
+            <div className="menu-link-wrapper">
               <span className="menu-link">Menu</span>
               <ul className="dropdown-box">
                 <Link to={'/main-course'}> <li className="dropdown-option">Main course</li></Link>
-                <Link to={'/healthy-options'}> <li className="dropdown-option">Healthy options</li></Link>
+                <Link to={'/healthy'}> <li className="dropdown-option">Healthy options</li></Link>
                 <Link to={'/snacks'}> <li className="dropdown-option">Snacks</li></Link>
                 <Link to={'/lunch-box'}> <li className="dropdown-option">Lunchbox</li></Link>
               </ul>
-            </di>
+            </div>
           </div>
 
           <div className="navbar-side nav-right">

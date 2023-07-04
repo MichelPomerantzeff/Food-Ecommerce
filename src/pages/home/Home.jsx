@@ -3,14 +3,14 @@ import Banner from "../../components/banner/Banner";
 import Specials from "../../components/specials/Specials";
 import Slider from "../../components/slider/Slider";
 import Navbar from "../../components/navbar/Navbar";
-import { dishes } from "../../data/data";
+import { banner, dishes } from "../../data/data";
 import Footer from "../../components/footer/Footer";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <Banner />
+      <Banner banner={banner.home} />
       <Specials />
       <Slider title={"CHICKEN"} dish={dishes.chicken} />
       <Slider title={"BEEF"} dish={dishes.beef} />

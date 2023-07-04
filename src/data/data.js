@@ -1,5 +1,3 @@
-
-
 export const dishes = {
     
     beef: [
@@ -32,7 +30,7 @@ export const dishes = {
 }
 
 
-export const healthy = {
+export const healthyOptions = {
     
     day_one: [
         { id: "6.1", title: "Brocolli rice", price: 4.50, image: "./images/menu/healthy/day-1/brocolli-rice.png", units: 0 },
@@ -45,19 +43,19 @@ export const healthy = {
         { id: "7.3", title: "Mignon slices", price: 10.00, image: "./images/menu/healthy/day-2/mignon-slices.png", units: 0 }
     ],
     day_three: [
-        { id: "8.1", title: "Crusted chicken", price: 6.90, image: "./images/menu/healthy/day-3/crusted-chickeb.png", units: 0 },
+        { id: "8.1", title: "Crusted chicken", price: 6.90, image: "./images/menu/healthy/day-3/crusted-chicken.png", units: 0 },
         { id: "8.2", title: "Roasted carrot", price: 4.00, image: "./images/menu/healthy/day-3/roasted-carrot.png", units: 0 },
         { id: "8.3", title: "Sweet potato", price: 4.00, image: "./images/menu/healthy/day-3/sweet-potato.png", units: 0 }
     ],
     day_four: [
-        { id: "9.1", title: "Jasmin rice", price: 4.50, image: "./images/menu/healthy/day-4/jasmin-rice.png", units: 0 },
-        { id: "9.2", title: "Pumpkin slices", price: 5.00, image: "./images/menu/healthy/day-4/pumpkim-slices.png", units: 0 },
-        { id: "9.3", title: "Saint Peter with lime", price: 10.00, image: "./images/menu/healthy/day-4/saint-peter.png", units: 0 }
+        { id: "9.1", title: "Brocolli rice", price: 4.50, image: "./images/menu/healthy/day-5/brocolli-rice.png", units: 0 },
+        { id: "9.2", title: "Crusted chicken", price: 6.90, image: "./images/menu/healthy/day-5/crusted-chicken.png", units: 0 },
+        { id: "9.3", title: "Roasted corgette", price: 4.00, image: "./images/menu/healthy/day-5/roasted-corgette.png", units: 0 }
     ],
     day_five: [
-        { id: "10.1", title: "Brocolli rice", price: 4.50, image: "./images/menu/healthy/day-5/brocolli-rice.png", units: 0 },
-        { id: "10.2", title: "Crusted chicken", price: 6.90, image: "./images/menu/healthy/day-5/crusted-chicken.png", units: 0 },
-        { id: "10.3", title: "Roasted corgette", price: 4.00, image: "./images/menu/healthy/day-5/roasted-corgette.png", units: 0 }
+        { id: "10.1", title: "Jasmin rice", price: 4.50, image: "./images/menu/healthy/day-4/jasmin-rice.png", units: 0 },
+        { id: "10.2", title: "Pumpkin slices", price: 5.00, image: "./images/menu/healthy/day-4/pumpkim-slices.png", units: 0 },
+        { id: "10.3", title: "Saint Peter with lime", price: 10.00, image: "./images/menu/healthy/day-4/saint-peter.png", units: 0 }
     ]
 }
 
@@ -74,7 +72,7 @@ export const snacks = {
     ]
 }
 
-export const wrappedUp = [
+export const lunchBoxes = [
     { id: "13.1", title: "", price: 0, image: "", weight: "", units: 0 },
     { id: "13.2", title: "", price: 0, image: "", weight: "", units: 0 },
     { id: "13.3", title: "", price: 0, image: "", weight: "", units: 0 }
@@ -88,17 +86,16 @@ export const specials = [
 ]
 
 
-export const banner = [
-    {id: "15.1", title: "One", image: "./images/banner/one.png"},
-    {id: "15.2", title: "Two", image: "./images/banner/two.png"},
-    {id: "15.3", title: "Three", image: "./images/banner/three.png"},
-    {id: "15.4", title: "Four", image: "./images/banner/four.png"}
-]
+export const banner = {
+    home: "./images/banner/home-banner.png",
+    lunchBox: "./images/banner/lunch-box.png",
+    mainCourse: "./images/banner/main-course.png",
+    snacks: "./images/banner/snacks.png",
+    healthyBanner: "./images/banner/healthy-banner.png",
+}
 
 export const signInBg = "./images/signs/sign-in-bg.png"
 export const signUpBg = "./images/signs/sign-up-bg.png"
-
-export const test = "./images/6.png"
 export const logo = "./images/rest-logo.png"
 export const emptyBox = "./images/empty-box/empty-box.png"
 export const aboutImg = "./images/about-img.png"
