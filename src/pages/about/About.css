@@ -1,0 +1,32 @@
+.about{
+    background: rgb(177, 34, 82);
+    position: relative;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading{
+    width: 1000px;
+    text-align: center;
+    color: #fff;
+    margin-top: -140px;
+}
+
+.heading h1{
+    font-size: 2.5rem;
+    margin: 40px 0;
+}
+
+.heading p{
+    font-size: 1.2rem;
+    margin: 40px 0;
+}
+
+.about-img{
+    position: absolute;
+    top: 60%;
+    width: 1200px;
+    border-radius: 10px;
+}

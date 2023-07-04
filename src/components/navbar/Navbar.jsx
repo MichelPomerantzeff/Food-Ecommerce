@@ -49,7 +49,7 @@ export default function Navbar() {
               <Logo/>
             </Link>
 
-            <Link>
+            <Link to={'/about'}>
               <span className="about-link">About</span>
             </Link>
 
