@@ -5,7 +5,7 @@ import Login from "./pages/signin/Login";
 import Register from "./pages/signup/Register";
 import About from "./pages/about/About";
 import Snacks from "./pages/snacks/Snacks";
-import MainCourse from "./pages/main-course/MainCourse";
+import MainCoursePage from "./pages/main-course-page/MainCoursePage";
 import HealthyPage from "./pages/healthy-page/HealthyPage";
 import LunchBox from "./pages/lunch-box/LunchBox";
 
@@ -26,7 +26,7 @@ function App() {
     },
     {
       path: "/main-course",
-      element: < MainCourse/>,
+      element: < MainCoursePage/>,
     },
     {
       path: "/healthy",

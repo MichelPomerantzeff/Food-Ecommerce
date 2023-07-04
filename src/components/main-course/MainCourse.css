@@ -1,0 +1,23 @@
+.main-course {
+    background: linear-gradient(var(--background), #fff );
+    padding: 30px 0;
+}
+
+.main-course-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 1220px;
+    margin: auto;
+}
+
+.main-course-category {
+    /* background: red; */
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.main-course-dish {
+    width: 600px;
+}
