@@ -96,17 +96,12 @@
     transform: scale(.8);
 }
 
-.bag {}
-
-.bag-icon {
-    transform: scale(1.3);
-    color: #fff;
-    background: var(--main_color);
-    padding: 10px 30px;
-    border-radius: 20px;
+.cart {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 
-.bag-icon:hover {
-    background: var(--darker_main_color);
-    cursor: pointer;
+.cart:hover {
+    background: var(--background);
 }

@@ -1,63 +1,63 @@
 import React, { useEffect } from "react";
-import "./Bag.css";
+import "./Cart.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
-import ItemInBag from "./ItemInBag";
+import ItemInCart from "./ItemInCart";
 import { useDispatch, useSelector } from "react-redux";
 import { emptyBox } from '../../data/data';
-import { reset } from "../../redux/features/bagSlice";
+import { reset } from "../../redux/features/cartSlice";
 
-export default function Bag({closeBag}) {
+export default function Cart({closeCart}) {
 
   const dispatch = useDispatch();
-  const bagItems = useSelector(state => state.bag);
+  const cartItems = useSelector(state => state.cart);
 
-  const bagUnits = bagItems?.reduce((acc, cur) => {
+  const cartUnits = cartItems?.reduce((acc, cur) => {
     return cur.units + acc
   }, 0)
 
-  const clearBag = () => {
+  const clearCart = () => {
     dispatch((reset()))
   }
 
   return (
-    <section className="bag-page">
-      <div className="bag-heading">
+    <section className="cart-page">
+      <div className="cart-heading">
         {
-          bagItems.length > 0 ?
-          <div className="items-qnt">{bagUnits} {bagUnits > 1 ? 'items' : 'item'}</div>
+          cartItems.length > 0 ?
+          <div className="items-qnt">{cartUnits} {cartUnits > 1 ? 'items' : 'item'}</div>
           :
           <div className="empty"></div>
         }
-        <button onClick={() => closeBag(false)} className="close-bag">
+        <button onClick={() => closeCart(false)} className="close-cart">
             <span>CLOSE</span>
             <FontAwesomeIcon className="close-icon" icon={faCircleXmark} />
         </button>
       </div>
-      <div className="items-in-bag">
+      <div className="items-in-cart">
 
         {
-          bagItems.length > 0 &&
-          <button className="remove-all" onClick={clearBag}>Remove all</button>
+          cartItems.length > 0 &&
+          <button className="remove-all" onClick={clearCart}>Remove all</button>
         }
 
         {
-          bagItems.length > 0 ?
-          bagItems?.map(item => {
+          cartItems.length > 0 ?
+          cartItems?.map(item => {
             return(
-              <ItemInBag key={item.id} dish={item} />
+              <ItemInCart key={item.id} dish={item} />
               )
             })
             :
             <div className="empty-box">
             <img src={emptyBox} alt="EMPTY BOX" />
-            <span>YOUR BAG IS EMPTY</span>
+            <span>YOUR CART IS EMPTY</span>
           </div>
         }
 
       </div>
       {
-        bagItems.length > 0 &&
+        cartItems.length > 0 &&
         <div className="order-details">
           <div className="order-detail-field">
             <span className="subtotal">Subtotal</span>

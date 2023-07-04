@@ -1,12 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBagShopping, faCircleInfo, faListAlt, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
 import "../../shared/Dropdown.css"
 import { Link } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth"
 import { auth } from "../../config/firebase"
 import { signOut } from "firebase/auth";
-import Bag from "../bag/Bag";
+import Cart from "../cart/Cart";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import Logo from "../logo/Logo";
@@ -18,13 +18,13 @@ import { ShoppingCartOutlined } from "@mui/icons-material"
 export default function Navbar() {
 
   const [user] = useAuthState(auth);
-  const [isBagOpen, setIsBagOpen] = useState(false);
-  const bagItems = useSelector(state => state.bag);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const cartItems = useSelector(state => state.cart);
 
 
 
 
-  const bagUnits = bagItems?.reduce((acc, cur) => {
+  const cartUnits = cartItems?.reduce((acc, cur) => {
     return cur.units + acc
   }, 0)
 
@@ -37,7 +37,7 @@ export default function Navbar() {
   
   return (
     <>
-      {isBagOpen && <Bag closeBag={setIsBagOpen}/>}
+      {isCartOpen && <Cart closeCart={setIsCartOpen}/>}
       <section className="topbar-container">
         <div className="offer-highlight">
           Great Deal! Get 10% off for orders over €50
@@ -76,8 +76,8 @@ export default function Navbar() {
                 <span>Login</span>
               </Link>
             }
-            <div onClick={() => setIsBagOpen(true)} className="bag">
-              <Badge badgeContent={bagUnits} color="primary" onClick={() => setIsBagOpen(true)} className="bag">
+            <div onClick={() => setIsCartOpen(true)} className="cart">
+              <Badge badgeContent={cartUnits} color="primary" onClick={() => setIsCartOpen(true)} >
                 <ShoppingCartOutlined />
               </Badge>
             </div>

@@ -2,40 +2,40 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
-import { add, remove } from "../../redux/features/bagSlice";
+import { add, remove } from "../../redux/features/cartSlice";
 
-export default function ItemInBag({dish}) {
+export default function ItemInCart({dish}) {
 
   const dispatch = useDispatch();
   
-  const addToBag = (item) => {
+  const addToCart = (item) => {
     // dispatch a add action
     dispatch(add(item));
   }
 
-  const removeFromBag = (item) => {
+  const removeFromCart = (item) => {
     // dispatch a remove action
     dispatch(remove(item));
   }
 
   return (
-    <div className="item-in-bag">
-      <div className="item-in-bag-img">
+    <div className="item-in-cart">
+      <div className="item-in-cart-img">
         <img src={dish.image} alt="Item imgage" />
       </div>
-      <div className="item-in-bag-field">
-        <div className="item-in-bag-top-line">
+      <div className="item-in-cart-field">
+        <div className="item-in-cart-top-line">
           <h1>{dish.title}</h1>
           <span>{dish.info}</span>
         </div>
-        <div className="item-in-bag-bottom-line">
+        <div className="item-in-cart-bottom-line">
           <span>€{dish.price.toFixed(2)}</span>
-          <div className="item-in-bag-buttons">
-            <button onClick={() => removeFromBag(dish)} className="remove-btn">
+          <div className="item-in-cart-buttons">
+            <button onClick={() => removeFromCart(dish)} className="remove-btn">
               <FontAwesomeIcon icon={faMinus} />
             </button>
             <span>{dish.units}</span>
-            <button onClick={() => addToBag(dish)} className="add-btn">
+            <button onClick={() => addToCart(dish)} className="add-btn">
               <FontAwesomeIcon icon={faPlus} />
             </button>
           </div>

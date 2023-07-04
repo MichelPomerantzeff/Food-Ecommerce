@@ -1,5 +1,5 @@
 import "./App.css";
-import Bag from "./components/bag/Bag";
+import Cart from "./components/cart/Cart";
 import Banner from "./components/banner/Banner";
 import HealthyOption from "./components/healthy-option/HealthyOption";
 import Navbar from "./components/navbar/Navbar";
@@ -50,7 +50,7 @@ function App() {
 
       {/* <SignIn/> */}
       {/* <HealthyOption /> */}
-      {/* <Bag/>       */}
+      {/* <Cart/>       */}
 
     </main>
   );

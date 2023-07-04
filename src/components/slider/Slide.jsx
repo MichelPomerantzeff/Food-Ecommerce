@@ -2,21 +2,21 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
-import { add, remove } from "../../redux/features/bagSlice";
+import { add, remove } from "../../redux/features/cartSlice";
 
 export default function Slide({dish}) {
 
-  const bagItems = useSelector(state => state.bag);
+  const cartItems = useSelector(state => state.cart);
   const dispatch = useDispatch();
 
-  const itemQnt = bagItems.find(item => item.id == dish.id)
+  const itemQnt = cartItems.find(item => item.id == dish.id)
 
-  const addToBag = (item) => {
+  const addToCart = (item) => {
     // dispatch an add function
     dispatch(add(item))
   }
 
-  const removeToBag = (item) => {
+  const removeToCart = (item) => {
     // dispatch an remove function
     dispatch(remove(item))
   }
@@ -38,7 +38,7 @@ export default function Slide({dish}) {
             {itemQnt?.units > 0 && (
               <>
                 <div className="remove-button">
-                  <button onClick={() => removeToBag(dish)}>
+                  <button onClick={() => removeToCart(dish)}>
                     <FontAwesomeIcon icon={faMinus} />
                   </button>
                 </div>
@@ -50,7 +50,7 @@ export default function Slide({dish}) {
             )}
 
             <div className="add-button">
-              <button onClick={() => addToBag(dish)}>
+              <button onClick={() => addToCart(dish)}>
                 {!itemQnt ? "ADD" : <FontAwesomeIcon icon={faPlus} />}
               </button>
             </div>

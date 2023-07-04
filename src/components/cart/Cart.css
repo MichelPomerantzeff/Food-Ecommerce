@@ -1,4 +1,4 @@
-.bag-page {
+.cart-page {
     position: fixed;
     top: 25px;
     right: 0;
@@ -8,7 +8,7 @@
     background: #fff;
 }
 
-.bag-heading {
+.cart-heading {
     height: 75px;
     display: flex;
     align-items: center;
@@ -21,7 +21,7 @@
     font-weight: bold;
 }
 
-.close-bag{
+.close-cart{
     height: 30px;
     display: flex;
     align-items: center;
@@ -33,7 +33,7 @@
     cursor: pointer;
 }
 
-.close-bag span{
+.close-cart span{
     font-size: .75rem;
     font-weight: bold;
 }
@@ -46,7 +46,7 @@
     font-size: 1rem;
 }
 
-.items-in-bag{
+.items-in-cart{
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -58,7 +58,7 @@
     /* border: solid 1px red; */
 }
 
-.item-in-bag {
+.item-in-cart {
     /* border: solid 1px green; */
     display: flex;
     justify-content: space-between;
@@ -66,7 +66,7 @@
     width: 100%;
 }
 
-.item-in-bag-img {
+.item-in-cart-img {
     /* background: red; */
     height: 96px;
     width: 96px;
@@ -77,13 +77,13 @@
     align-items: center;
 }
 
-.item-in-bag-img img{
+.item-in-cart-img img{
     width: 130px;
     height: 100%;
 }
 
 
-.item-in-bag-field{
+.item-in-cart-field{
     /* background: blue; */
     flex: 1;
     display: flex;
@@ -91,34 +91,34 @@
     justify-content: space-evenly;
 }
 
-.item-in-bag-top-line {
+.item-in-cart-top-line {
     font-size: 1.1rem;
 }
 
-.item-in-bag-top-line h1{
+.item-in-cart-top-line h1{
     font-size: 1rem;
 }
 
-.item-in-bag-top-line span{
+.item-in-cart-top-line span{
     font-size: .8rem;
     color: gray;
 }
 
-.item-in-bag-bottom-line{
+.item-in-cart-bottom-line{
     display: flex;
     align-items: center;
     justify-content: space-between;
     
 }
 
-.item-in-bag-buttons{
+.item-in-cart-buttons{
     margin-right: 10px;
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.item-in-bag-buttons .add-btn{
+.item-in-cart-buttons .add-btn{
     border: solid 2px var(--main_color);
     color: var(--main_color);
     border-radius: 5px;
@@ -129,13 +129,13 @@
     transition: .2s;
 }
 
-.item-in-bag-buttons .add-btn:hover{
+.item-in-cart-buttons .add-btn:hover{
     cursor: pointer;
     background: var(--main_color);
     color: #fff;
 }
 
-.item-in-bag-buttons .remove-btn{
+.item-in-cart-buttons .remove-btn{
     border: solid 2px var(--light_border);
     color: var(--main_color);
     background: #fff;
@@ -146,7 +146,7 @@
     transition: .2s;
 }
 
-.item-in-bag-buttons .remove-btn:hover{
+.item-in-cart-buttons .remove-btn:hover{
     cursor: pointer;
     color: var(--main_color);
     border: solid 2px var(--main_color);
