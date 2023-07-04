@@ -11,6 +11,10 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import Logo from "../logo/Logo";
 
+import { Badge } from "@mui/material"
+import { ShoppingCartOutlined } from "@mui/icons-material"
+
+
 export default function Navbar() {
 
   const [user] = useAuthState(auth);
@@ -73,9 +77,10 @@ export default function Navbar() {
               </Link>
             }
             <div onClick={() => setIsBagOpen(true)} className="bag">
-              <FontAwesomeIcon className="bag-icon" icon={faBagShopping} />
+              <Badge badgeContent={bagUnits} color="primary" onClick={() => setIsBagOpen(true)} className="bag">
+                <ShoppingCartOutlined />
+              </Badge>
             </div>
-              <span>{bagUnits}</span>
           </div>
 
         </div>
