@@ -7,8 +7,8 @@ import { banner } from "../../data/data";
 export default function LunchBox() {
   return (
     <>
-      <Navbar/>
-      <Banner banner={banner.lunchBox}/>
+      <Navbar />
+      <Banner banner={banner.lunchBox} />
       <div className="lunch-box">LUNCH BOX</div>
     </>
   );

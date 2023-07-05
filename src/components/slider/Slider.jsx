@@ -12,7 +12,7 @@ import Dish from "./Dish";
 import { Link } from "react-router-dom";
 
 export default function Slider(props) {
-  
+
   const [swiper, setSwiper] = useState(null);
 
   const nexto = () => {
@@ -51,7 +51,7 @@ export default function Slider(props) {
           {props.dish.map((d) => {
             return (
               <SwiperSlide key={d.id}>
-                <Dish dish={d}/>
+                <Dish dish={d} />
               </SwiperSlide>
             );
           })}

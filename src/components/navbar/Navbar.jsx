@@ -10,10 +10,8 @@ import Cart from "../cart/Cart";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import Logo from "../logo/Logo";
-
 import { Badge } from "@mui/material"
 import { ShoppingCartOutlined } from "@mui/icons-material"
-
 
 export default function Navbar() {
 
@@ -21,23 +19,18 @@ export default function Navbar() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const cartItems = useSelector(state => state.cart);
 
-
-
-
   const cartUnits = cartItems?.reduce((acc, cur) => {
     return cur.units + acc
   }, 0)
-
-
 
   //Log user out
   function signUserOut() {
     signOut(auth)
   }
-  
+
   return (
     <>
-      {isCartOpen && <Cart closeCart={setIsCartOpen}/>}
+      {isCartOpen && <Cart closeCart={setIsCartOpen} />}
       <section className="topbar-container">
         <div className="offer-highlight">
           Great Deal! Get 10% off for orders over €50
@@ -46,7 +39,7 @@ export default function Navbar() {
         <div className="navbar">
           <div className="navbar-side nav-left">
             <Link to={"/"}>
-              <Logo/>
+              <Logo />
             </Link>
 
             <Link to={'/about'}>
@@ -67,20 +60,20 @@ export default function Navbar() {
           <div className="navbar-side nav-right">
             {
               user ?
-              <div className="log-in-icon-wrapper">
-                <FontAwesomeIcon className="log-in-icon" icon={faUser} />
-                <span>{user.displayName}</span>
+                <div className="log-in-icon-wrapper">
+                  <FontAwesomeIcon className="log-in-icon" icon={faUser} />
+                  <span>{user.displayName}</span>
 
-                <ul className="dropdown-box">
-                  <li className="dropdown-option"> Orders history </li>
-                  <li className="dropdown-option" onClick={signUserOut} > Sign out </li>
-                </ul>
+                  <ul className="dropdown-box">
+                    <li className="dropdown-option"> Orders history </li>
+                    <li className="dropdown-option" onClick={signUserOut} > Sign out </li>
+                  </ul>
 
-              </div>
-              :
-              <Link className="log-in-icon-wrapper" to={"/sign-in"}>
-                <span>Login</span>
-              </Link>
+                </div>
+                :
+                <Link className="log-in-icon-wrapper" to={"/sign-in"}>
+                  <span>Login</span>
+                </Link>
             }
             <div onClick={() => setIsCartOpen(true)} className="cart">
               <Badge badgeContent={cartUnits} color="primary" onClick={() => setIsCartOpen(true)} >

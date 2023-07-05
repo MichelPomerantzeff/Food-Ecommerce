@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth"
+import { getAuth } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -13,7 +13,7 @@ const firebaseConfig = {
   storageBucket: "food-ecommerce-fc12b.appspot.com",
   messagingSenderId: "831453046052",
   appId: "1:831453046052:web:50628952c5d8cae5d13fb1",
-  measurementId: "G-Q9F9E1WGRW"
+  measurementId: "G-Q9F9E1WGRW",
 };
 
 // Initialize Firebase

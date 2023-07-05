@@ -17,7 +17,7 @@ export default function Home() {
       <Slider title={"PASTA"} dish={dishes.pasta} />
       <Slider title={"VEGETARIAN"} dish={dishes.vegetarian} />
       <Slider title={"FISH"} dish={dishes.fish} />
-      <Footer/>
+      <Footer />
     </>
   );
 }

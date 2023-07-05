@@ -2,7 +2,7 @@ import React from "react";
 import "./MainCourse.css";
 import Dish from "../slider/Dish";
 
-export default function MainCourse({title, dishes}) {
+export default function MainCourse({ title, dishes }) {
     return (
         <div className="main-course">
             <div className="main-course-wrapper">

@@ -8,7 +8,7 @@ export default function Snacks() {
   return (
     <>
       <Navbar />
-      <Banner banner={banner.snacks}/>
+      <Banner banner={banner.snacks} />
       <div className="snacks">SNACKS</div>
     </>
   );

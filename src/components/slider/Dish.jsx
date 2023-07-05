@@ -4,7 +4,7 @@ import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { add, remove } from "../../redux/features/cartSlice";
 
-export default function Dish({dish}) {
+export default function Dish({ dish }) {
 
   const cartItems = useSelector(state => state.cart);
   const dispatch = useDispatch();

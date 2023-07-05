@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { emptyBox } from '../../data/data';
 import { reset } from "../../redux/features/cartSlice";
 
-export default function Cart({closeCart}) {
+export default function Cart({ closeCart }) {
 
   const dispatch = useDispatch();
   const cartItems = useSelector(state => state.cart);
@@ -22,10 +22,10 @@ export default function Cart({closeCart}) {
   }, 0)
 
   useEffect(() => {
-    if(subTotal < 50) {
+    if (subTotal < 50) {
       setDiscount(0)
-    }else {
-      setDiscount(subTotal*0.1)
+    } else {
+      setDiscount(subTotal * 0.1)
     }
   }, [subTotal]);
 
@@ -38,13 +38,13 @@ export default function Cart({closeCart}) {
       <div className="cart-heading">
         {
           cartItems.length > 0 ?
-          <div className="items-qnt">{cartUnits} {cartUnits > 1 ? 'items' : 'item'}</div>
-          :
-          <div className="empty"></div>
+            <div className="items-qnt">{cartUnits} {cartUnits > 1 ? 'items' : 'item'}</div>
+            :
+            <div className="empty"></div>
         }
         <button onClick={() => closeCart(false)} className="close-cart">
-            <span>CLOSE</span>
-            <FontAwesomeIcon className="close-icon" icon={faCircleXmark} />
+          <span>CLOSE</span>
+          <FontAwesomeIcon className="close-icon" icon={faCircleXmark} />
         </button>
       </div>
       <div className="items-in-cart">
@@ -56,16 +56,16 @@ export default function Cart({closeCart}) {
 
         {
           cartItems.length > 0 ?
-          cartItems?.map(item => {
-            return(
-              <ItemInCart key={item.id} dish={item} />
+            cartItems?.map(item => {
+              return (
+                <ItemInCart key={item.id} dish={item} />
               )
             })
             :
             <div className="empty-box">
-            <img src={emptyBox} alt="EMPTY BOX" />
-            <span>YOUR CART IS EMPTY</span>
-          </div>
+              <img src={emptyBox} alt="EMPTY BOX" />
+              <span>YOUR CART IS EMPTY</span>
+            </div>
         }
 
       </div>

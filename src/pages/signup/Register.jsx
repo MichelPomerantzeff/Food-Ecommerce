@@ -39,10 +39,10 @@ export default function Register() {
             <h1> CREATE AN ACCOUNT AND LET'S GET STARTED </h1>
             <form>
               <div className="inputs-wrapper">
-                <input onChange={e => setName(e.target.value)} type="text" name="name" id="name" placeholder="Name" required/>
-                <input onChange={e => setEmail(e.target.value)} type="email" name="email" id="email" placeholder="Email" required/>
-                <input onChange={e => setPassword(e.target.value)} type="password" name="pasword" id="pasword" placeholder="Password" required/>
-                <input onChange={e => setConfirmPassword(e.target.value)} type="password" name="confirm-password" id="confirm-password" placeholder="Confirm password" required/>
+                <input onChange={e => setName(e.target.value)} type="text" name="name" id="name" placeholder="Name" required />
+                <input onChange={e => setEmail(e.target.value)} type="email" name="email" id="email" placeholder="Email" required />
+                <input onChange={e => setPassword(e.target.value)} type="password" name="pasword" id="pasword" placeholder="Password" required />
+                <input onChange={e => setConfirmPassword(e.target.value)} type="password" name="confirm-password" id="confirm-password" placeholder="Confirm password" required />
               </div>
             </form>
 
@@ -59,7 +59,7 @@ export default function Register() {
           <img src={signUpBg} alt="REGISTER IMAGE" />
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 }

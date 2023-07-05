@@ -16,7 +16,7 @@ export default function MainCoursePage() {
       <MainCourse title={"FISH"} dishes={dishes.fish} />
       <MainCourse title={"PASTA"} dishes={dishes.pasta} />
       <MainCourse title={"VEGETARIAN"} dishes={dishes.vegetarian} />
-      <Footer/>
+      <Footer />
     </>
   );
 }

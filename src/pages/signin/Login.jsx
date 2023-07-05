@@ -35,11 +35,11 @@ export default function Login(props) {
           <div className="sign-wrapper">
 
             <h1> SIGN IN </h1>
-            
+
             <form>
               <div className="inputs-wrapper">
-                <input onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email" placeholder="Email" required/>
-                <input onChange={(e) => setPassword(e.target.value)} type="password" name="pasword" id="pasword" placeholder="Password" required/>
+                <input onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email" placeholder="Email" required />
+                <input onChange={(e) => setPassword(e.target.value)} type="password" name="pasword" id="pasword" placeholder="Password" required />
               </div>
             </form>
 
@@ -59,7 +59,7 @@ export default function Login(props) {
           <img src={signInBg} alt="SIGN IN IMAGE" />
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 }

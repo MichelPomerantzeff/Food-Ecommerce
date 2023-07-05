@@ -4,10 +4,10 @@ import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
 import { add, remove } from "../../redux/features/cartSlice";
 
-export default function ItemInCart({dish}) {
+export default function ItemInCart({ dish }) {
 
   const dispatch = useDispatch();
-  
+
   const addToCart = (item) => {
     // dispatch a add action
     dispatch(add(item));

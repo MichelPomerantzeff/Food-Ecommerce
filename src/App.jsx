@@ -14,31 +14,31 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: < Home/>,
+      element: < Home />,
     },
     {
       path: "/about",
-      element: < About/>,
+      element: < About />,
     },
     {
       path: "/snacks",
-      element: < Snacks/>,
+      element: < Snacks />,
     },
     {
       path: "/main-course",
-      element: < MainCoursePage/>,
+      element: < MainCoursePage />,
     },
     {
       path: "/healthy",
-      element: < HealthyPage/>,
+      element: < HealthyPage />,
     },
     {
       path: "/lunch-box",
-      element: < LunchBox/>,
+      element: < LunchBox />,
     },
     {
       path: "sign-in",
-      element: < Login/>,
+      element: < Login />,
     },
     {
       path: "sign-up",
@@ -48,7 +48,7 @@ function App() {
 
   return (
     <main className="app">
-      <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </main>
   );
 }

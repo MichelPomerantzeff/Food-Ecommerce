@@ -9,13 +9,13 @@ export default function HealthyPage() {
   return (
     <>
       <Navbar />
-      <Heading/>
-      <HealthyDay day={1} healthyOptions={healthyOptions.day_one}/>
-      <HealthyDay day={2} healthyOptions={healthyOptions.day_two}/>
-      <HealthyDay day={3} healthyOptions={healthyOptions.day_three}/>
-      <HealthyDay day={4} healthyOptions={healthyOptions.day_four}/>
-      <HealthyDay day={5} healthyOptions={healthyOptions.day_five}/>
-      <Footer/>
+      <Heading />
+      <HealthyDay day={1} healthyOptions={healthyOptions.day_one} />
+      <HealthyDay day={2} healthyOptions={healthyOptions.day_two} />
+      <HealthyDay day={3} healthyOptions={healthyOptions.day_three} />
+      <HealthyDay day={4} healthyOptions={healthyOptions.day_four} />
+      <HealthyDay day={5} healthyOptions={healthyOptions.day_five} />
+      <Footer />
     </>
   );
 }
