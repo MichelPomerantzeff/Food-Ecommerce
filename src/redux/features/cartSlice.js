@@ -8,6 +8,7 @@ export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
+    
     add: (state, action) => {
       const existingItem = state.find((item) => action.payload.id == item.id);
       if (existingItem) {
@@ -26,7 +27,6 @@ export const cartSlice = createSlice({
 
     remove: (state, action) => {
       const existingItem = state.find((i) => action.payload.id == i.id);
-
       if (existingItem?.units > 1) {
         state.map((item) => {
           if (item.id == action.payload.id) {
