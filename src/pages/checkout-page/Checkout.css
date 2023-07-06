@@ -1,0 +1,12 @@
+.checkout {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout-wrapper {
+    border: solid 1px lightgray;
+    padding: 350px;
+    border-radius: 10px;
+}

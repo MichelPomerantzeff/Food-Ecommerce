@@ -8,6 +8,7 @@ import SnacksPage from "./pages/snacks-page/SnacksPage";
 import MainCoursePage from "./pages/main-course-page/MainCoursePage";
 import HealthyPage from "./pages/healthy-page/HealthyPage";
 import LunchBoxPage from "./pages/lunch-box-page/LunchBoxPage";
+import CheckoutPage from "./pages/checkout-page/CheckoutPage";
 
 function App() {
 
@@ -43,6 +44,10 @@ function App() {
     {
       path: "sign-up",
       element: < SignUpPage />,
+    },
+    {
+      path: "checkout",
+      element: < CheckoutPage />,
     },
   ]);
 
