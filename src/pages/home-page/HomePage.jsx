@@ -6,7 +6,7 @@ import Navbar from "../../components/navbar/Navbar";
 import { banner, dishes } from "../../data/data";
 import Footer from "../../components/footer/Footer";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <Navbar />

@@ -1,24 +1,24 @@
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./pages/home/Home";
-import Login from "./pages/signin/Login";
-import Register from "./pages/signup/Register";
-import About from "./pages/about/About";
+import HomePage from "./pages/home-page/HomePage";
+import SignInPage from "./pages/sign-in-page/SignInPage";
+import SignUpPage from "./pages/sign-up-page/SignUnPage";
+import AboutPage from "./pages/about-page/AboutPage";
 import SnacksPage from "./pages/snacks-page/SnacksPage";
 import MainCoursePage from "./pages/main-course-page/MainCoursePage";
 import HealthyPage from "./pages/healthy-page/HealthyPage";
-import LunchBox from "./pages/lunch-box/LunchBox";
+import LunchBoxPage from "./pages/lunch-box-page/LunchBoxPage";
 
 function App() {
 
   const router = createBrowserRouter([
     {
       path: "/",
-      element: < Home />,
+      element: < HomePage />,
     },
     {
       path: "/about",
-      element: < About />,
+      element: < AboutPage />,
     },
     {
       path: "/snacks",
@@ -34,15 +34,15 @@ function App() {
     },
     {
       path: "/lunch-box",
-      element: < LunchBox />,
+      element: < LunchBoxPage />,
     },
     {
       path: "sign-in",
-      element: < Login />,
+      element: < SignInPage />,
     },
     {
       path: "sign-up",
-      element: < Register />,
+      element: < SignUpPage />,
     },
   ]);
 

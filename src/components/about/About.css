@@ -1,8 +1,6 @@
-.about{
-    
-}
+.about {}
 
-.about-heading{
+.about-heading {
     background: #b12252;
     color: #fff;
     display: flex;
@@ -14,38 +12,38 @@
     padding-bottom: 150px;
 }
 
-.about-heading h1{
+.about-heading h1 {
     text-align: center;
     font-size: 2.5rem;
     width: 1200px;
     margin: 0 auto;
 }
 
-.about-heading p{
+.about-heading p {
     text-align: center;
     font-size: 1.2rem;
     width: 1200px;
     margin: 0 auto;
 }
 
-.about-heading-img{
+.about-heading-img {
     display: flex;
     justify-content: center;
     margin-top: -150px;
 }
 
-.about-img{
+.about-img {
     border-radius: 10px;
 }
 
-.about-description{
+.about-description {
     display: flex;
     flex-direction: column;
     gap: 60px;
     padding: 120px 0;
 }
 
-.description-wrapper{
+.description-wrapper {
     width: 600px;
     margin: auto;
     display: flex;
@@ -53,11 +51,11 @@
     gap: 20px;
 }
 
-.description-wrapper h1{
+.description-wrapper h1 {
     font-size: 2rem;
 }
 
-.description-wrapper p{
+.description-wrapper p {
     font-size: 1rem;
     letter-spacing: .2px;
     word-spacing: 1px;

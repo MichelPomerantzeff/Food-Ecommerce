@@ -3,12 +3,11 @@ import Navbar from "../../components/navbar/Navbar";
 import { signUpBg } from "../../data/data";
 import { Link, useNavigate } from "react-router-dom";
 import '../../css/UserLog.css'
-
 import { auth } from "../../config/firebase"
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
 import Footer from "../../components/footer/Footer";
 
-export default function Register() {
+export default function SignUpPage() {
 
   const navigate = useNavigate();
 
