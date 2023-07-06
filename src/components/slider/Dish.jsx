@@ -32,8 +32,10 @@ export default function Dish({ dish }) {
           <span className="slide-item-info">{dish.info}</span>
         </div>
         <div className="slide-item-bottom-line">
-          <span className="price">€{dish.price.toFixed(2)}</span>
-          <span className="weight">{dish.weight}</span>
+          <div className="price-and-weight-wrapper">
+            <span className="price">€{dish.price.toFixed(2)}</span>
+            <span className="weight">{dish.weight}</span>
+          </div>
           <div className="manage-added-items">
             {itemQnt?.units > 0 && (
               <>

@@ -181,6 +181,7 @@
     padding: 10px;
     border-radius: 5px;
     transition: .2s;
+    font-weight: bold;
 }
 
 .payment-btn:hover{

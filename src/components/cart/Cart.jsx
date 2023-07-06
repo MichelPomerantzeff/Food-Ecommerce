@@ -84,7 +84,7 @@ export default function Cart({ closeCart }) {
             <span className="total">Total</span>
             <span>€{(subTotal - discount).toFixed(2)}</span>
           </div>
-          <button className="payment-btn">Payment</button>
+          <button className="payment-btn">Checkout</button>
         </div>
       }
     </section>
