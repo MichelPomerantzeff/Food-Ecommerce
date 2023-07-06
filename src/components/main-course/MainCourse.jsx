@@ -10,7 +10,7 @@ export default function MainCourse({ title, dishes }) {
                 <div className="main-course-category">
                     {dishes.map((dish) => {
                         return (
-                            <div className="main-course-dish">
+                            <div key={dish.id} className="main-course-dish">
                                 <Dish dish={dish} />
                             </div>
                         );
