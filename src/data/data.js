@@ -284,14 +284,17 @@ export const healthyOptions = {
 
 export const snacks = {
   savory: [
-    { id: "11.1", title: "", price: 0, image: "", weight: "", units: 0 },
-    { id: "11.2", title: "", price: 0, image: "", weight: "", units: 0 },
-    { id: "11.3", title: "", price: 0, image: "", weight: "", units: 0 },
+    { id: "11.1", title: "Meat roll", price: 3.50, image: "./images/menu/snacks/savory/beef-roll.png", weight: "100g", units: 0 },
+    { id: "11.2", title: "Cheese bread", price: 2.40, image: "./images/menu/snacks/savory/cheese-bread.png", weight: "60g", units: 0 },
+    { id: "11.3", title: "Chicken bread", price: 2.70, image: "./images/menu/snacks/savory/chicken-bread.png", weight: "100g", units: 0 },
+    { id: "11.4", title: "Croissant", price: 2.90, image: "./images/menu/snacks/savory/croissant.png", weight: "70g", units: 0 },
+    { id: "11.5", title: "Tapioca bread", price: 2.50, image: "./images/menu/snacks/savory/tapioca-bread.png", weight: "80g", units: 0 },
   ],
   sweets: [
-    { id: "12.1", title: "", price: 0, image: "", weight: "", units: 0 },
-    { id: "12.2", title: "", price: 0, image: "", weight: "", units: 0 },
-    { id: "12.3", title: "", price: 0, image: "", weight: "", units: 0 },
+    { id: "12.1", title: "Brownie", price: 2.90, image: "./images/menu/snacks/sweets/brownie.png", weight: "50g", units: 0 },
+    { id: "12.2", title: "Carrot cake", price: 2.40, image: "./images/menu/snacks/sweets/carrot-cake.png", weight: "60g", units: 0 },
+    { id: "12.3", title: "Chocolate bun", price: 2.80, image: "./images/menu/snacks/sweets/chocolate-bun.png", weight: "65g", units: 0 },
+    { id: "12.4", title: "Chocolate mousse", price: 3.50, image: "./images/menu/snacks/sweets/chocolate-mousse.png", weight: "60g", units: 0 },
   ],
 };
 
@@ -337,5 +340,5 @@ export const signUpBg = "./images/signs/sign-up-bg.png";
 export const logo = "./images/rest-logo.png";
 export const emptyBox = "./images/empty-box/empty-box.png";
 export const aboutImg = "./images/about-img.png";
-export const appleStore = "./images/apple-store.png";
-export const playStore = "./images/play-store.png";
+export const appleStore = "./images/download-app-img/apple-store.png";
+export const playStore = "./images/download-app-img/play-store.png";

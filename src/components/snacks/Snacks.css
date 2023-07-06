@@ -1,0 +1,37 @@
+.snacks {
+    background: linear-gradient(var(--background), #fff );
+    padding: 30px 0;
+}
+
+.snack-title{
+    width: 1200px;
+    margin: 20px auto;
+}
+
+.snacks-wrapper {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 1200px;
+    margin: auto;
+}
+
+.snack-wrapper {
+    width: 285px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.snack-wrapper .slide-image {
+    height: 180px;
+}
+
+.snack-wrapper .slide-image img {
+    width: 100%;
+}
+
+.snack-wrapper .slide-item-bottom-line {
+    flex-direction: column;
+}

@@ -13,7 +13,7 @@ export default function Heading() {
           <div className="ho-heading-right-wrapper">
             <h2 className="ho-title">HEALTHIER 2023 KIT</h2>
             <p className="ho-description">
-              Our selection of ready-to-eat frozen meals comes in a 10-day kit,
+              Our selection of ready-to-eat frozen meals comes in a 5-day kit,
               designed to help you establish a healthier routine.
             </p>
             <div className="ho-price-wrapper">

@@ -4,7 +4,7 @@ import Home from "./pages/home/Home";
 import Login from "./pages/signin/Login";
 import Register from "./pages/signup/Register";
 import About from "./pages/about/About";
-import Snacks from "./pages/snacks/Snacks";
+import SnacksPage from "./pages/snacks-page/SnacksPage";
 import MainCoursePage from "./pages/main-course-page/MainCoursePage";
 import HealthyPage from "./pages/healthy-page/HealthyPage";
 import LunchBox from "./pages/lunch-box/LunchBox";
@@ -22,7 +22,7 @@ function App() {
     },
     {
       path: "/snacks",
-      element: < Snacks />,
+      element: < SnacksPage />,
     },
     {
       path: "/main-course",
