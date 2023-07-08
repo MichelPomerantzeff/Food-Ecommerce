@@ -1,7 +1,7 @@
 const functions = require("firebase-functions");
 const express = require("express");
 const cors = require("cors");
-const env = require("dotenv").config({ path: "./.env" });
+require("dotenv").config({path: "./.env.local"});
 
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
@@ -9,13 +9,15 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const app = express();
 
 // Middlewares
-app.use(cors({ origin: true }));
+app.use(cors({origin: true}));
 app.use(express.static("public"));
 app.use(express.json());
 
 // API routes
 
-app.get('/', (request, response) => response.status(200).send("hello world!!!!"))
+app.get("/", (request, response) =>
+  response.status(200).send("hello world!!!!"),
+);
 
 app.get("/config", (req, res) => {
   res.send({
@@ -26,12 +28,12 @@ app.get("/config", (req, res) => {
 app.post("/payment/create", async (request, response) => {
   const total = request.query.total;
   console.log("Payment request received for this amount: ", total);
-  
+
   try {
     const paymentIntent = await stripe.paymentIntents.create({
       currency: "eur",
       amount: total,
-      automatic_payment_methods: { enabled: true },
+      automatic_payment_methods: {enabled: true},
     });
     // OK - Created
     response.send({
@@ -39,8 +41,8 @@ app.post("/payment/create", async (request, response) => {
     });
   } catch (e) {
     // ERROR - Failed to create
-    console.log(e)
-  } 
+    console.log(e);
+  }
 });
 
 // Listen command
