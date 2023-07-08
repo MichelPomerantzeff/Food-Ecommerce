@@ -6,12 +6,14 @@ import ItemInCart from "./ItemInCart";
 import { useDispatch, useSelector } from "react-redux";
 import { emptyBox } from '../../data/data';
 import { reset } from "../../redux/features/cartSlice";
+import { useNavigate } from "react-router";
 
 export default function Cart({ closeCart }) {
 
   const dispatch = useDispatch();
   const cartItems = useSelector(state => state.cart);
   const [discount, setDiscount] = useState(0)
+  const navigate = useNavigate();
 
   const subTotal = cartItems?.reduce((acc, cur) => {
     return (cur.price * cur.units) + acc
@@ -84,7 +86,7 @@ export default function Cart({ closeCart }) {
             <span className="total">Total</span>
             <span>€{(subTotal - discount).toFixed(2)}</span>
           </div>
-          <button className="payment-btn">Checkout</button>
+          <button onClick={() => navigate('/payment')} className="payment-btn">Checkout</button>
         </div>
       }
     </section>

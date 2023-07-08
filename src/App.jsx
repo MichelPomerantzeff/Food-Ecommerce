@@ -8,7 +8,10 @@ import SnacksPage from "./pages/snacks-page/SnacksPage";
 import MainCoursePage from "./pages/main-course-page/MainCoursePage";
 import HealthyPage from "./pages/healthy-page/HealthyPage";
 import LunchBoxPage from "./pages/lunch-box-page/LunchBoxPage";
-import CheckoutPage from "./pages/checkout-page/CheckoutPage";
+import PaymentPage from "./pages/payment-page/PaymentPage";
+import OrdersPage from "./pages/orders-page/OrdersPage";
+import Completion from "./pages/completion/Completion";
+
 
 function App() {
 
@@ -46,8 +49,16 @@ function App() {
       element: < SignUpPage />,
     },
     {
-      path: "checkout",
-      element: < CheckoutPage />,
+      path: "payment",
+      element: < PaymentPage />
+    },
+    {
+      path: "orders",
+      element: < OrdersPage />,
+    },
+    {
+      path: "completion",
+      element: < Completion />,
     },
   ]);
 

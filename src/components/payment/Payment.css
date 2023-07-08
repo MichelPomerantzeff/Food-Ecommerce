@@ -1,0 +1,30 @@
+.payment {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: red; */
+}
+
+.payment-wrapper {
+    /* border: solid 1px lightgray; */
+    border-radius: 10px;
+    width: 450px;
+    padding: 20px;
+}
+
+.payment-wrapper h1{
+    margin: 50px;
+}
+
+.all-cart-items {
+    display: flex;
+    gap: 10px;
+}
+
+.cart-item{
+    border: solid 1px;
+    border-radius: 5px;
+    padding: 10px;
+}
