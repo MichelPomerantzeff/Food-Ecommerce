@@ -5,8 +5,6 @@ import { useSelector } from 'react-redux';
 export default function Topbar() {
 
     const cartItems = useSelector(state => state.cart);
-    const cartUnits = cartItems?.reduce((acc, cur) => cur.units + acc, 0)
-    const total = cartItems.reduce((acc, cur) => ((cur.price * cur.units) + acc), 0);
 
     return (
         <div className='topbar'>
@@ -14,10 +12,12 @@ export default function Topbar() {
                 <Logo />
             </div>
             <div className="topbar-content">
-                <span>ITEMS</span>
+                <span>
+                    You have <strong style={{ textDecoration: 'underline' }}>{cartItems.totalItems} {cartItems.totalItems > 1 ? 'items' : 'item'}</strong> in your cart
+                </span>
             </div>
             <div className="topbar-content">
-                <span>TOTAL</span>
+                <span>Total: €{(cartItems.totalPrice - (cartItems.totalPrice * cartItems.discount)).toFixed(2)}</span>
             </div>
         </div>
     )

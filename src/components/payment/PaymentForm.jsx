@@ -20,7 +20,6 @@ export default function PaymentForm() {
     const [user] = useAuthState(auth);
 
     const cartItems = useSelector(state => state.cart);
-    const total = cartItems.reduce((acc, cur) => ((cur.price * cur.units) + acc), 0);
     var orderNumber = Math.floor(Math.random() * 999999);
 
     const stripe = useStripe();
@@ -30,7 +29,7 @@ export default function PaymentForm() {
         // Generate a client secret to charge a custumer
         axios({
             method: "post",
-            url: `/payment/create?total=${(total * 100).toFixed(0)}`
+            url: `/payment/create?total=${(cartItems.totalPrice * 100).toFixed(0)}`
         }).then(res => {
             setClientSecret(res.data.clientSecret)
             console.log(res.data.clientSecret)
@@ -46,7 +45,7 @@ export default function PaymentForm() {
         setDoc(doc(db, "users", user.email, "orders", clientSecret), {
             orderNumber: orderNumber,
             items: cartItems,
-            amount: (total),
+            amount: (cartItems.totalPrice - (cartItems.totalPrice * cartItems.discount)),
             created: new Date().toLocaleString(),
         });
 
@@ -75,7 +74,7 @@ export default function PaymentForm() {
             <h4>Hello, {user?.displayName}</h4>
             <div className="all-cart-items">
                 {
-                    cartItems?.map(item => {
+                    cartItems.cartItems?.map(item => {
                         return (
                             <div key={item.id} className="cart-item">
                                 <span>{item.title}, </span>
@@ -86,7 +85,7 @@ export default function PaymentForm() {
                 }
             </div>
             <h3 className="total-price">
-                €{total.toFixed(2)}
+                €{(cartItems.totalPrice - (cartItems.totalPrice * cartItems.discount)).toFixed(2)}
             </h3>
             <div className="payment-wrapper">
                 <h1>Payment method</h1>
@@ -100,7 +99,7 @@ export default function PaymentForm() {
                         disabled={processing || disabled || succeeded}
                     >
                         <span>
-                            {processing ? <p>PROCESSING...</p> : `PAY ${total.toFixed(2)}`}
+                            {processing ? <p>PROCESSING...</p> : `PAY ${cartItems.totalPrice}`}
                         </span>
                     </button>
                 </form>

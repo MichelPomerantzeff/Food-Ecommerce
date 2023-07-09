@@ -20,8 +20,6 @@ export default function Orders() {
         };
     };
 
-    console.log(ordersData)
-
     useEffect(() => {
         getOrdersFromDB();
     }, [user]);

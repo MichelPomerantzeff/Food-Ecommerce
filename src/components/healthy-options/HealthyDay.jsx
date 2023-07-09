@@ -2,9 +2,7 @@ import React, { useEffect } from "react";
 
 export default function HealthyDay({ day, healthyOptions }) {
 
-    const totalPrice = healthyOptions.reduce((acc, cur) => {
-        return acc + cur.price;
-    }, 0);
+    const totalPrice = healthyOptions.reduce((acc, cur) => acc + cur.price, 0);
 
     return (
         <div className="healthy-day">

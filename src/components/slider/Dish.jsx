@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
@@ -7,9 +7,8 @@ import { add, remove } from "../../redux/features/cartSlice";
 export default function Dish({ dish }) {
 
   const cartItems = useSelector(state => state.cart);
+  const item = cartItems.cartItems?.find(item => item.id == dish.id)
   const dispatch = useDispatch();
-
-  const itemQnt = cartItems.find(item => item.id == dish.id)
 
   const addToCart = (item) => {
     // dispatch an add function
@@ -37,7 +36,7 @@ export default function Dish({ dish }) {
             <span className="weight">{dish.weight}</span>
           </div>
           <div className="manage-added-items">
-            {itemQnt?.units > 0 && (
+            {item?.units > 0 && (
               <>
                 <div className="remove-button">
                   <button onClick={() => removeToCart(dish)}>
@@ -46,14 +45,14 @@ export default function Dish({ dish }) {
                 </div>
 
                 <div className="item-qnt">
-                  <span>{itemQnt?.units}</span>
+                  <span>{item?.units}</span>
                 </div>
               </>
             )}
 
             <div className="add-button">
               <button onClick={() => addToCart(dish)}>
-                {!itemQnt ? "ADD" : <FontAwesomeIcon icon={faPlus} />}
+                {!item?.units > 0 ? "ADD" : <FontAwesomeIcon icon={faPlus} />}
               </button>
             </div>
           </div>

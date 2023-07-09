@@ -12,19 +12,7 @@ export default function Cart({ closeCart }) {
 
   const dispatch = useDispatch();
   const cartItems = useSelector(state => state.cart);
-  const [discount, setDiscount] = useState(0)
   const navigate = useNavigate();
-
-  const subTotal = cartItems?.reduce((acc, cur) => (cur.price * cur.units) + acc, 0)
-  const cartUnits = cartItems?.reduce((acc, cur) => cur.units + acc, 0)
-
-  useEffect(() => {
-    if (subTotal < 50) {
-      setDiscount(0)
-    } else {
-      setDiscount(subTotal * 0.1)
-    }
-  }, [subTotal]);
 
   const clearCart = () => {
     dispatch((reset()))
@@ -34,8 +22,8 @@ export default function Cart({ closeCart }) {
     <section className="cart-page">
       <div className="cart-heading">
         {
-          cartItems.length > 0 ?
-            <div className="items-qnt">{cartUnits} {cartUnits > 1 ? 'items' : 'item'}</div>
+          cartItems.cartItems?.length > 0 ?
+            <div className="items-qnt">{cartItems.totalItems} {cartItems.totalItems > 1 ? 'items' : 'item'}</div>
             :
             <div className="empty"></div>
         }
@@ -47,13 +35,13 @@ export default function Cart({ closeCart }) {
       <div className="items-in-cart">
 
         {
-          cartItems.length > 0 &&
+          cartItems.cartItems?.length > 0 &&
           <button className="remove-all" onClick={clearCart}>Remove all</button>
         }
 
         {
-          cartItems.length > 0 ?
-            cartItems?.map(item => {
+          cartItems.cartItems?.length > 0 ?
+            cartItems.cartItems?.map(item => {
               return (
                 <ItemInCart key={item.id} dish={item} />
               )
@@ -67,19 +55,19 @@ export default function Cart({ closeCart }) {
 
       </div>
       {
-        cartItems.length > 0 &&
+        cartItems.cartItems?.length > 0 &&
         <div className="order-details">
           <div className="order-detail-field">
             <span className="subtotal">Subtotal</span>
-            <span>€{subTotal.toFixed(2)}</span>
+            <span>€{cartItems.totalPrice}</span>
           </div>
           <div className="order-detail-field">
             <span className="delivery-fee">Discount</span>
-            <span>€{discount > 0 ? discount.toFixed(2) : 0}</span>
+            <span>€{(cartItems.totalPrice * cartItems.discount).toFixed(2)}</span>
           </div>
           <div className="order-detail-field">
             <span className="total">Total</span>
-            <span>€{(subTotal - discount).toFixed(2)}</span>
+            <span>€{(cartItems.totalPrice - (cartItems.totalPrice * cartItems.discount)).toFixed(2)}</span>
           </div>
           <button onClick={() => navigate('/payment')} className="payment-btn">Checkout</button>
         </div>

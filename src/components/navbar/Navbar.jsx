@@ -20,10 +20,6 @@ export default function Navbar() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const cartItems = useSelector(state => state.cart);
 
-  const cartUnits = cartItems?.reduce((acc, cur) => {
-    return cur.units + acc
-  }, 0)
-
   //Log user out
   function signUserOut() {
     signOut(auth)
@@ -75,7 +71,7 @@ export default function Navbar() {
                 </Link>
             }
             <div onClick={() => setIsCartOpen(true)} className="cart">
-              <Badge badgeContent={cartUnits} color="primary" onClick={() => setIsCartOpen(true)} >
+              <Badge badgeContent={cartItems.totalItems} color="primary" onClick={() => setIsCartOpen(true)} >
                 <ShoppingCartOutlined />
               </Badge>
             </div>

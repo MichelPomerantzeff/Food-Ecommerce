@@ -7,12 +7,11 @@ export default function PaymentPage() {
 
   const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
   const cartItems = useSelector(state => state.cart);
-  const total = cartItems.reduce((acc, cur) => ((cur.price * cur.units) + acc), 0);
 
   const options = {
     mode: 'payment',
     currency: 'eur',
-    amount: (total * 100),
+    amount: (cartItems.totalPrice * 100),
   }
 
   return (
