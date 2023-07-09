@@ -1,13 +1,14 @@
-import React from 'react';
 import moment from "moment";
+import "./Orders.css";
 
-export default function Order({order}) {
+export default function Order({ order }) {
+
     return (
         <div className='order'>
-            <h1>Pedido</h1>
-            <span className='order-code'><strong>Order code: </strong>{order?.id}</span>
-            <span className='date-format'><strong>Date: </strong>{moment.unix(order?.created).format("MMMM Do YYYY, h:mma")}</span>
-            <span className='order-total'><strong>Total: </strong>€{(order?.amount).toFixed(2)}</span>
+            <span className='order-row'><strong>Order number: </strong>{order?.orderNumber}</span>
+            <span className='order-row'><strong>Date: </strong>{order?.created}</span>
+            <span className='order-row'><strong>Total: </strong>€{(order?.amount).toFixed(2)}</span>
+            <a>SHOW DETAILS</a>
         </div>
     )
 }

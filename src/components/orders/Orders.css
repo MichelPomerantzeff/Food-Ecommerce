@@ -1,0 +1,37 @@
+.orders{
+    width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.orders h1{
+    text-align: center;
+    margin: 50px;
+}
+
+.orders-wrapper{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.order{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 250px;
+    border: solid 1px lightgray;
+    padding: 10px;
+}
+
+.order a{
+    color: var(--main_color);
+    font-size: .7rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.order a:hover{
+    text-decoration: underline;
+}

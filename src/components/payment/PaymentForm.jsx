@@ -6,6 +6,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth, db } from '../../config/firebase';
 import { doc, setDoc } from 'firebase/firestore';
 import axios from '../../config/axios';
+import moment from 'moment';
 
 export default function PaymentForm() {
 
@@ -45,6 +46,7 @@ export default function PaymentForm() {
             orderNumber: orderNumber,
             items: cartItems,
             amount: (total),
+            created: new Date().toLocaleString(),
         });
 
         await stripe.confirmPayment({

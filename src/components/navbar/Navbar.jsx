@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
 import "../../css/Dropdown.css"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth"
 import { auth } from "../../config/firebase"
 import { signOut } from "firebase/auth";
@@ -15,6 +15,7 @@ import { ShoppingCartOutlined } from "@mui/icons-material"
 
 export default function Navbar() {
 
+  const navigate = useNavigate();
   const [user] = useAuthState(auth);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const cartItems = useSelector(state => state.cart);
@@ -65,7 +66,7 @@ export default function Navbar() {
                   <span>{user.displayName}</span>
 
                   <ul className="dropdown-box">
-                    <li className="dropdown-option"> Orders history </li>
+                    <li className="dropdown-option" onClick={() => navigate('/orders')}> Orders history </li>
                     <li className="dropdown-option" onClick={signUserOut} > Sign out </li>
                   </ul>
 
