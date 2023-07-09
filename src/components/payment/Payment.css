@@ -7,7 +7,7 @@
     /* background: red; */
 }
 
-.topbar{
+.topbar {
     display: flex;
     width: 100vw;
     position: absolute;
@@ -18,7 +18,7 @@
     font-weight: bold;
 }
 
-.topbar-content{
+.topbar-content {
     display: flex;
     flex: 1;
     justify-content: center;
@@ -31,17 +31,62 @@
     padding: 20px;
 }
 
-.payment-wrapper h1{
+.payment-wrapper h1 {
     margin: 50px;
 }
 
-.all-cart-items {
+.payment-items-list {
     display: flex;
+    flex-direction: column;
     gap: 10px;
 }
 
-.cart-item{
-    border: solid 1px;
+.payment-items-list p {
+    font-weight: bold;
+    text-align: center;
+    width: 1000px;
+    font-size: 1.2rem;
+}
+
+.payment-items-list-wrapper {
+    border: solid 1px var(--light_border);
     border-radius: 5px;
-    padding: 10px;
+    width: 1000px;
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    overflow: auto;
+}
+
+.payment-item {
+    min-width: 300px;
+    width: 300px;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-right: 5px;
+}
+
+.payment-item img {
+    border: solid 1px var(--light_border);
+    max-width: 40%;
+    height: 80px;
+    border-radius: 5px;
+}
+
+.payment-item-fields {
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.payment-item-field {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    font-weight: bold;
 }

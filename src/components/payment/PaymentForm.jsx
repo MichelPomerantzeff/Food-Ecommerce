@@ -6,8 +6,8 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth, db } from '../../config/firebase';
 import { doc, setDoc } from 'firebase/firestore';
 import axios from '../../config/axios';
-import moment from 'moment';
 import Topbar from './Topbar';
+import ConfirmItemsList from './ConfirmItemsList';
 
 export default function PaymentForm() {
 
@@ -71,22 +71,7 @@ export default function PaymentForm() {
     return (
         <div className="payment">
             <Topbar />
-            <h4>Hello, {user?.displayName}</h4>
-            <div className="all-cart-items">
-                {
-                    cartItems.cartItems?.map(item => {
-                        return (
-                            <div key={item.id} className="cart-item">
-                                <span>{item.title}, </span>
-                                <span>{item.units} units</span>
-                            </div>
-                        )
-                    })
-                }
-            </div>
-            <h3 className="total-price">
-                €{(cartItems.totalPrice - (cartItems.totalPrice * cartItems.discount)).toFixed(2)}
-            </h3>
+            <ConfirmItemsList />
             <div className="payment-wrapper">
                 <h1>Payment method</h1>
                 <form onSubmit={handleSubmit}>
@@ -99,7 +84,7 @@ export default function PaymentForm() {
                         disabled={processing || disabled || succeeded}
                     >
                         <span>
-                            {processing ? <p>PROCESSING...</p> : `PAY ${cartItems.totalPrice}`}
+                            {processing ? <p>PROCESSING...</p> : `PAY €${(cartItems.totalPrice - (cartItems.totalPrice * cartItems.discount)).toFixed(2)}`}
                         </span>
                     </button>
                 </form>
