@@ -15,13 +15,8 @@ export default function Cart({ closeCart }) {
   const [discount, setDiscount] = useState(0)
   const navigate = useNavigate();
 
-  const subTotal = cartItems?.reduce((acc, cur) => {
-    return (cur.price * cur.units) + acc
-  }, 0)
-
-  const cartUnits = cartItems?.reduce((acc, cur) => {
-    return cur.units + acc
-  }, 0)
+  const subTotal = cartItems?.reduce((acc, cur) => (cur.price * cur.units) + acc, 0)
+  const cartUnits = cartItems?.reduce((acc, cur) => cur.units + acc, 0)
 
   useEffect(() => {
     if (subTotal < 50) {

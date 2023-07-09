@@ -39,9 +39,7 @@ export default function Navbar() {
 
         <div className="navbar">
           <div className="navbar-side nav-left">
-            <Link to={"/"}>
-              <Logo />
-            </Link>
+            <Logo />
 
             <Link to={'/about'}>
               <span className="about-link">About</span>

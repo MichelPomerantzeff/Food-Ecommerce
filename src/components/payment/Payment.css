@@ -7,6 +7,23 @@
     /* background: red; */
 }
 
+.topbar{
+    display: flex;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    align-items: center;
+    background: var(--background);
+    font-weight: bold;
+}
+
+.topbar-content{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
 .payment-wrapper {
     /* border: solid 1px lightgray; */
     border-radius: 10px;

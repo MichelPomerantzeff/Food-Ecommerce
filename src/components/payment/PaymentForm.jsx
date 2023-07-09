@@ -7,6 +7,7 @@ import { auth, db } from '../../config/firebase';
 import { doc, setDoc } from 'firebase/firestore';
 import axios from '../../config/axios';
 import moment from 'moment';
+import Topbar from './Topbar';
 
 export default function PaymentForm() {
 
@@ -70,6 +71,7 @@ export default function PaymentForm() {
 
     return (
         <div className="payment">
+            <Topbar />
             <h4>Hello, {user?.displayName}</h4>
             <div className="all-cart-items">
                 {
