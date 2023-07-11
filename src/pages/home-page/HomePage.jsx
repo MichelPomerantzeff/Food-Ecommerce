@@ -1,4 +1,3 @@
-import React from "react";
 import Banner from "../../components/banner/Banner";
 import Specials from "../../components/specials/Specials";
 import Slider from "../../components/slider/Slider";

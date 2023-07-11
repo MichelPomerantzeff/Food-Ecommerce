@@ -20,3 +20,29 @@
     font-size: .5rem;
     font-weight: bold;
 }
+
+
+@media (max-width:1500px) {}
+
+@media (max-width:1200px) {}
+
+@media (max-width:900px) {
+
+    .logo {
+        width: 50px;
+        height: 50px;
+        border: double 3px;
+    }
+
+    .logo img {
+        width: 25px;
+    }
+    
+    .logo span {
+        font-size: .45rem;
+    }
+}
+
+@media (max-width:650px) {}
+
+@media (max-width:480px) {}
