@@ -22,6 +22,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 .primary-btn{
   display: flex;
   justify-content: center;

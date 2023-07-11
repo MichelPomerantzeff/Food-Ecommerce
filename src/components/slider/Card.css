@@ -1,0 +1,148 @@
+.card {
+    background: #fff;
+    border: solid 1px var(--light_border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card-image {
+    display: flex;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    transition: .3s ease;
+}
+
+.card-description {
+    padding: 10px;
+    flex: 1;
+}
+
+.card-description h2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.1rem;
+    white-space: nowrap;
+}
+
+.card-description .card-info {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: .8rem;
+    color: gray;
+}
+
+.card-bottom-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 50px 20px 20px 20px;
+}
+
+.price-and-weight-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.manage-added-items {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.add-button,
+.remove-button {
+    flex: 1;
+}
+
+.add-button button {
+    width: 100%;
+    border: solid 2px var(--main_color);
+    border-radius: 5px;
+    padding: 8px;
+    color: var(--main_color);
+    transition: .2s;
+    font-weight: bold;
+}
+
+
+.add-button button:hover {
+    background: var(--main_color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.remove-button button {
+    width: 100%;
+    border: solid 2px var(--main_color);
+    border-radius: 5px;
+    padding: 8px;
+    color: var(--main_color);
+    transition: .2s;
+}
+
+.remove-button button:hover {
+    background: var(--main_color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.item-qnt {
+    text-align: center;
+    flex: 1;
+}
+
+@media (max-width:900px) {
+
+    .card {
+        border-radius: 5px;
+    }
+
+    .card-description h2 {
+        font-size: 1rem;
+    }
+
+    .card-description .card-info {
+        font-size: .8rem;
+    }
+
+    .card-bottom-line {
+        padding: 20px 10px 10px 10px;
+        font-size: .9rem;
+    }
+}
+
+@media (max-width:650px) {
+
+    .card-description {
+        font-size: .6rem;
+        padding: 5px;
+    }
+
+    .card-description h2 {
+        font-size: .7rem;
+    }
+
+    .card-description .card-info {
+        font-size: .6rem;
+    }
+
+    .card-bottom-line {
+        font-size: .6rem;
+    }
+
+    .add-button button,
+    .remove-button button {
+        font-size: .6rem;
+        padding: 3px;
+    }
+}

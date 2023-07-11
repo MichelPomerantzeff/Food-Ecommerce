@@ -4,8 +4,7 @@ import "./Slider.css";
 
 import { Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { ArrowBackIosRounded as LeftArrow, ArrowForwardIosRounded as RightArrow } from "@mui/icons-material";
 
 import { useState } from "react";
 import Dish from "./Dish";
@@ -25,18 +24,18 @@ export default function Slider(props) {
   return (
     <div className="slider">
       <div className="slider-wrapper">
-        <div className="slider-heading-wrapper">
-          <div className="slider-heading">
+        <div className="slider-header">
+          <div className="slider-title">
             <h2>{props.title}</h2>
             <Link to={'/main-course'}>SHOW ALL</Link>
           </div>
           {props.dish.length > 2 && (
-            <div className="slider-buttons">
-              <button className="left-btn" onClick={prevo}>
-                <FontAwesomeIcon icon={faChevronLeft} />
+            <div className="slider-header-buttons">
+              <button className="arrow-btn" onClick={prevo}>
+                <LeftArrow className="left-btn"/>
               </button>
-              <button className="right-btn" onClick={nexto}>
-                <FontAwesomeIcon icon={faChevronRight} />
+              <button className="arrow-btn" onClick={nexto}>
+                <RightArrow className="right-btn"/>
               </button>
             </div>
           )}
@@ -44,7 +43,7 @@ export default function Slider(props) {
 
         <Swiper
           modules={[Pagination, Scrollbar, A11y]}
-          spaceBetween={20}
+          spaceBetween={10}
           slidesPerView={2}
           onSwiper={(s) => setSwiper(s)}
         >

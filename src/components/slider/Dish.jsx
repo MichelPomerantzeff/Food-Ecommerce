@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { add, remove } from "../../redux/features/cartSlice";
+import './Card.css';
 
 export default function Dish({ dish }) {
 
@@ -21,15 +22,15 @@ export default function Dish({ dish }) {
 
   return (
     <>
-      <div className="slider-item">
-        <div className="slide-image">
-          <img src={dish.image} alt="Salmple 1" />
+      <div className="card">
+        <div className="card-image">
+          <img src={dish.image} alt="Card image" />
         </div>
-        <div className="slide-item-description">
+        <div className="card-description">
           <h2>{dish.title}</h2>
-          <span className="slide-item-info">{dish.info}</span>
+          <p className="card-info">{dish.info}</p>
         </div>
-        <div className="slide-item-bottom-line">
+        <div className="card-bottom-line">
           <div className="price-and-weight-wrapper">
             <span className="price">€{dish.price.toFixed(2)}</span>
             <span className="weight">{dish.weight}</span>
