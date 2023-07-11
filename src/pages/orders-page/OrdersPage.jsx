@@ -1,6 +1,5 @@
-import React from 'react'
-import Orders from '../../components/orders/Orders'
-import Navbar from '../../components/navbar/Navbar'
+import Orders from '../../components/orders/Orders';
+import Navbar from '../../components/navbar/Navbar';
 
 export default function OrdersPage() {
     return (

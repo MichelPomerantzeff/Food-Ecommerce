@@ -1,4 +1,3 @@
-import React from "react";
 import "./HealthyOptions.css";
 import { banner } from "../../data/data";
 

@@ -1,4 +1,3 @@
-import React from "react";
 import "./MainCourse.css";
 import Dish from "../slider/Dish";
 

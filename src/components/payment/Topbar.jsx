@@ -1,5 +1,4 @@
-import React from 'react'
-import Logo from '../logo/Logo'
+import Logo from '../logo/Logo';
 import { useSelector } from 'react-redux';
 
 export default function Topbar() {

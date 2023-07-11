@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import { Link, useNavigate } from "react-router-dom";
 import { signInBg } from "../../data/data";

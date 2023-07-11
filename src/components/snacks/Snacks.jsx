@@ -1,5 +1,4 @@
 import "./Snacks.css";
-import React from 'react'
 import Dish from "../slider/Dish";
 
 export default function Snacks({ title, snacks }) {

@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
-import './Completion.css'
-import { Link } from 'react-router-dom'
+import { useEffect } from 'react';
+import './Completion.css';
+import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { reset } from '../../redux/features/cartSlice';
 

@@ -11,7 +11,7 @@ export default function PaymentPage() {
   const options = {
     mode: 'payment',
     currency: 'eur',
-    amount: (cartItems.totalPrice * 100),
+    amount: cartItems.totalPrice * 100,
   }
 
   return (

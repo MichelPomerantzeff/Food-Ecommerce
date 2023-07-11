@@ -1,5 +1,3 @@
-import React, { useEffect } from "react";
-
 export default function HealthyDay({ day, healthyOptions }) {
 
     const totalPrice = healthyOptions.reduce((acc, cur) => acc + cur.price, 0);

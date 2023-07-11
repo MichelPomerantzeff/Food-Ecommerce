@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import './Payment.css'
-import { PaymentElement, useElements, useStripe } from '@stripe/react-stripe-js'
+import { useEffect, useState } from 'react';
+import './Payment.css';
+import { PaymentElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import { useSelector } from 'react-redux';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth, db } from '../../config/firebase';
@@ -45,7 +45,7 @@ export default function PaymentForm() {
         setDoc(doc(db, "users", user.email, "orders", clientSecret), {
             orderNumber: orderNumber,
             items: cartItems,
-            amount: (cartItems.totalPrice - (cartItems.totalPrice * cartItems.discount)),
+            amount: cartItems.totalPrice - (cartItems.totalPrice * cartItems.discount),
             created: new Date().toLocaleString(),
         });
 

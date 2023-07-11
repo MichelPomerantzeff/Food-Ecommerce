@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
@@ -7,18 +6,18 @@ import { add, remove } from "../../redux/features/cartSlice";
 export default function Dish({ dish }) {
 
   const cartItems = useSelector(state => state.cart);
-  const item = cartItems.cartItems?.find(item => item.id == dish.id)
+  const item = cartItems.cartItems?.find(item => item.id == dish.id);
   const dispatch = useDispatch();
 
   const addToCart = (item) => {
     // dispatch an add function
     dispatch(add(item))
-  }
+  };
 
   const removeToCart = (item) => {
     // dispatch an remove function
     dispatch(remove(item))
-  }
+  };
 
   return (
     <>

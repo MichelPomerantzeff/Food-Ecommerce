@@ -1,7 +1,6 @@
-import React from 'react'
-import './Footer.css'
-import { Email, Facebook, Instagram, LocationOn, Phone, Twitter, WhatsApp } from '@mui/icons-material'
-import { appleStore, playStore } from '../../data/data'
+import './Footer.css';
+import { Email, Facebook, Instagram, LocationOn, Phone, Twitter, WhatsApp } from '@mui/icons-material';
+import { appleStore, playStore } from '../../data/data';
 
 export default function Footer() {
     return (

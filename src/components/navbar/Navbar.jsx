@@ -1,15 +1,15 @@
 import "./Navbar.css";
-import "../../css/Dropdown.css"
+import "../../css/Dropdown.css";
 import { useNavigate } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth"
-import { auth } from "../../config/firebase"
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../config/firebase";
 import { signOut } from "firebase/auth";
 import Cart from "../cart/Cart";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import Logo from "../logo/Logo";
-import { Badge } from "@mui/material"
-import { ShoppingCartOutlined, MenuBook,InfoOutlined as Info, AccountCircle as User } from "@mui/icons-material"
+import { Badge } from "@mui/material";
+import { ShoppingCartOutlined, MenuBook,InfoOutlined as Info, AccountCircle as User } from "@mui/icons-material";
 
 export default function Navbar() {
 

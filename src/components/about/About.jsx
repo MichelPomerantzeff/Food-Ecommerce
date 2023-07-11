@@ -1,8 +1,6 @@
 import { aboutImg } from "../../data/data";
 import "./About.css";
 
-import React from 'react'
-
 export default function About() {
     return (
         <section className="about">
