@@ -20,11 +20,20 @@
 
 @media (max-width:900px) {
 
+    .banner {
+        padding: 20px 0;
+    }
+
     .banner-wrapper {
         width: 95vw;
     }
 }
 
-@media (max-width:650px) {}
+@media (max-width:650px) {
+
+    .banner {
+        padding: 0;
+    }
+}
 
 @media (max-width:480px) {}
