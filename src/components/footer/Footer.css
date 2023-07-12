@@ -50,13 +50,13 @@
     color: #1DA1F2;
 }
 
-.downloadappwrapper {
+.download-app-wrapper {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.downloadappimage:hover {
+.download-app-image {
     cursor: pointer;
 }
 
@@ -105,7 +105,9 @@
 
 @media (max-width:650px) {
 
-
+    .download-app-image {
+        width: 100px;
+    }
 }
 
 @media (max-width:480px) {}

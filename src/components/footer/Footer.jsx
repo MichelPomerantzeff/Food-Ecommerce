@@ -34,9 +34,9 @@ export default function Footer() {
                     <div className="footer-side footer-center">
                         <h2>Download our app</h2>
 
-                        <div className="downloadappwrapper">
-                            <img src={appleStore} alt="APPLE STORE" />
-                            <img src={playStore} alt="PLAY STORE" />
+                        <div className="download-app-wrapper">
+                            <img className="download-app-image" src={appleStore} alt="APPLE STORE" />
+                            <img className="download-app-image" src={playStore} alt="PLAY STORE" />
                         </div>
                     </div>
                 </div>
