@@ -17,7 +17,7 @@ export default function Orders() {
             const colRef = collection(docRef, 'orders')
             const data = await getDocs(colRef);
             setOrdersData(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-        };
+        }
     };
 
     useEffect(() => {

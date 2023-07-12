@@ -1,5 +1,6 @@
 .orders{
-    width: 1200px;
+    max-width: 1200px;
+    width: 90vw;
     margin: auto;
     padding: 20px;
 }
@@ -34,4 +35,25 @@
 
 .order a:hover{
     text-decoration: underline;
+}
+
+@media (max-width:650px) {
+
+    .order{
+        gap: 3px;
+        width: 200px;
+        padding: 5px;
+    }
+
+    .orders h1{
+        font-size: 1.2rem;
+    }
+
+    .order-row {
+        font-size: .8rem;
+    }
+
+    .order a{
+        font-size: .5rem;
+    }
 }
