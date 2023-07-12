@@ -7,8 +7,8 @@ export default function Footer() {
         <footer className="footer-container">
             <div className="footer-box">
                 <div className="footer-wrapper left">
-                    <div className="footer-left">
-                        <h2 className="socials">Social Medias</h2>
+                    <div className="footer-side footer-left">
+                        <h2>Social Medias</h2>
 
                         <ul className="icons-wrapper">
                             <li className="facebook social-icon" name="facebook">
@@ -31,8 +31,8 @@ export default function Footer() {
                 </div>
 
                 <div className="footer-wrapper center">
-                    <div className="footer-center">
-                        <h2 className="mobile-apps">Download our app</h2>
+                    <div className="footer-side footer-center">
+                        <h2>Download our app</h2>
 
                         <div className="downloadappwrapper">
                             <img src={appleStore} alt="APPLE STORE" />
@@ -42,9 +42,9 @@ export default function Footer() {
                 </div>
 
                 <div className="footer-wrapper right">
-                    <div className="footer-right">
-                        <div className="contactbox">
-                            <div className="contacticon">
+                    <div className="footer-side footer-right">
+                        <div className="info-box">
+                            <div className="info-icon">
                                 <LocationOn />
                             </div>
                             <div className="text">
@@ -52,8 +52,8 @@ export default function Footer() {
                             </div>
                         </div>
 
-                        <div className="contactbox">
-                            <div className="contacticon">
+                        <div className="info-box">
+                            <div className="info-icon">
                                 <Phone />
                             </div>
                             <div className="text">
@@ -61,8 +61,8 @@ export default function Footer() {
                             </div>
                         </div>
 
-                        <div className="contactbox">
-                            <div className="contacticon">
+                        <div className="info-box">
+                            <div className="info-icon">
                                 <Email />
                             </div>
                             <div className="text">
