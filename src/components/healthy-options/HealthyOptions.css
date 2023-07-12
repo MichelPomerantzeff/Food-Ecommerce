@@ -4,34 +4,32 @@
 }
 
 .ho-heading {
-    width: 1200px;
+    max-width: 1200px;
+    width: 90vw;
     margin: auto;
     display: flex;
     justify-content: center;
 }
 
 .ho-heading-left {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex: 1;
 }
 
 .ho-heading-left img {
-    border-radius: 10px;
+    width: 100%;
 }
 
 .ho-heading-right {
-    display: flex;
-    align-items: center;
     flex: 1;
+    width: 100%;
+    margin: auto;
 }
 
 .ho-heading-right-wrapper {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin: 0 110px;
+    margin: 0 80px;
 }
 
 .ho-heading-right-wrapper p {
@@ -48,10 +46,10 @@
 }
 
 .healthy-day {
-    /* border: solid 1px red; */
     display: flex;
     flex-direction: column;
-    width: 1200px;
+    max-width: 1200px;
+    width: 90vw;
     margin: 50px auto;
     gap: 20px;
 }
@@ -60,7 +58,6 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    /* border: solid 1px black; */
 }
 
 .count-day-wrapper {
@@ -92,24 +89,21 @@
     justify-content: center;
 }
 
-
-.healthy-lunch {}
-
 .healthy-lunch h2 {
     font-size: 1rem;
 }
 
 .healthy-day-items-wrapper {
-    /* border: solid 1px blue; */
     display: flex;
     justify-content: space-evenly;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .healthy-day-item {
-    /* border: solid 1px green; */
     flex: 1;
     display: flex;
+    min-width: 250px;
 }
 
 .healthy-day-img {
@@ -132,4 +126,41 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
+}
+
+@media (max-width:1200px) {
+
+    .ho-heading-right-wrapper {
+        margin: 0 40px;
+    }
+}
+
+@media (max-width:900px) {
+
+    .healthy-options {
+        padding: 20px 0;
+    }
+
+    .ho-heading {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .ho-heading-right-wrapper {
+        margin: 0;
+    }
+
+    .healthy-lunch {
+        font-size: .8rem;
+    }
+
+    .healthy-day-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 5px;
+    }
+
+    .healthy-day-fields{
+        font-size: .8rem;
+    }
 }
