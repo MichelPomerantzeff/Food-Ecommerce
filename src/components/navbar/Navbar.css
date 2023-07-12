@@ -100,14 +100,10 @@
     background: var(--background);
 }
 
-@media (max-width:1500px) {}
-
-@media (max-width:1200px) {}
-
 @media (max-width:900px) {
 
     .topbar-container {
-        margin-bottom: 100px;
+        margin-bottom: 80px;
     }
 
     .offer-highlight {

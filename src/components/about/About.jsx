@@ -17,7 +17,7 @@ export default function About() {
             </div>
 
             <div className="about-description">
-                <div className="description-wrapper">
+                <div className="about-description-wrapper">
                     <h1>WE CONNECT YOU TO DELICIOUS FOOD</h1>
                     <p>
                         In collaboration with family farmers, we source fresh ingredients
@@ -29,7 +29,7 @@ export default function About() {
                     </p>
                 </div>
 
-                <div className="description-wrapper">
+                <div className="about-description-wrapper">
                     <h1>DIVERSITY SPEAKS VOLUMES</h1>
                     <p>
                         We offer a wide range of ready-to-eat frozen meals to elevate your
@@ -40,7 +40,7 @@ export default function About() {
                     </p>
                 </div>
 
-                <div className="description-wrapper">
+                <div className="about-description-wrapper">
                     <h1>LOTS OF TECHNOLOGY AND LOVE INVOLVED</h1>
                     <p>
                         We have a user-friendly app, seamless delivery services, and meals

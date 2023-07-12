@@ -1,4 +1,6 @@
-.about {}
+.about {
+    margin-top: -100px;
+}
 
 .about-heading {
     background: #b12252;
@@ -7,32 +9,36 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-    height: 500px;
-    padding-bottom: 150px;
+    gap: 50px;
+    padding: 150px 0;
 }
 
 .about-heading h1 {
     text-align: center;
     font-size: 2.5rem;
-    width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px;
+    width: 90vw;
+    margin: auto;
 }
 
 .about-heading p {
     text-align: center;
     font-size: 1.2rem;
-    width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px;
+    width: 90vw;
+    margin: auto;
 }
 
 .about-heading-img {
     display: flex;
     justify-content: center;
-    margin-top: -150px;
+    max-width: 1000px;
+    width: 90vw;
+    margin: -100px auto 0 auto;
 }
 
 .about-img {
+    width: 100%;
     border-radius: 10px;
 }
 
@@ -41,22 +47,89 @@
     flex-direction: column;
     gap: 60px;
     padding: 120px 0;
+    max-width: 600px;
+    width: 90vw;
+    margin: auto;
 }
 
-.description-wrapper {
-    width: 600px;
+.about-description-wrapper {
     margin: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.description-wrapper h1 {
+
+.about-description-wrapper h1 {
     font-size: 2rem;
 }
 
-.description-wrapper p {
+.about-description-wrapper p {
     font-size: 1rem;
     letter-spacing: .2px;
     word-spacing: 1px;
+}
+
+@media (max-width:1200px) {
+
+    .about-description-wrapper {
+        gap: 20px;
+    }
+}
+
+@media (max-width:900px) {
+
+    .about-heading {
+        gap: 30px;
+    }
+    
+    .about-heading h1 {
+        font-size: 2rem;
+    }
+    
+    .about-heading p {
+        font-size: 1rem;
+    }
+
+    .about-description {
+        gap: 40px;
+        padding: 80px 0;
+    }
+
+    .about-description-wrapper h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-description-wrapper p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:650px) {
+
+    .about-heading {
+        gap: 10px;
+        padding: 130px 0;
+    }
+    
+    .about-heading h1 {
+        font-size: 1.2rem;
+    }
+    
+    .about-heading p {
+        font-size: .8rem;
+    }
+
+    .about-description {
+        gap: 30px;
+        padding: 80px 0;
+    }
+
+    .about-description-wrapper h1 {
+        font-size: 1.2rem;
+    }
+
+    .about-description-wrapper p {
+        font-size: .8rem;
+    }
 }
