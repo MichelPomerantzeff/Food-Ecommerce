@@ -5,12 +5,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { emptyBox } from '../../data/data';
 import { reset } from "../../redux/features/cartSlice";
 import { useNavigate } from "react-router";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../config/firebase";
 
 export default function Cart({ closeCart }) {
 
   const dispatch = useDispatch();
   const cartItems = useSelector(state => state.cart);
   const navigate = useNavigate();
+  const [user] = useAuthState(auth);
 
   const clearCart = () => {
     dispatch((reset()))
@@ -67,7 +70,12 @@ export default function Cart({ closeCart }) {
             <span className="total">Total</span>
             <span>€{(cartItems.totalPrice - (cartItems.totalPrice * cartItems.discount)).toFixed(2)}</span>
           </div>
-          <button onClick={() => navigate('/payment')} className="payment-btn">Checkout</button>
+          {
+            user ?
+            <button onClick={() => navigate('/payment')} className="payment-btn">Checkout</button>
+            :
+            <button onClick={() => navigate('/sign-in')} className="payment-btn">Login</button>
+          }
         </div>
       }
     </section>

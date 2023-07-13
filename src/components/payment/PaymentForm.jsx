@@ -6,7 +6,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth, db } from '../../config/firebase';
 import { doc, setDoc } from 'firebase/firestore';
 import axios from '../../config/axios';
-import Topbar from './Topbar';
+import PaymentTopbar from './PaymentTopbar';
 import ConfirmItemsList from './ConfirmItemsList';
 
 export default function PaymentForm() {
@@ -70,7 +70,7 @@ export default function PaymentForm() {
 
     return (
         <div className="payment">
-            <Topbar />
+            <PaymentTopbar />
             <ConfirmItemsList />
             <div className="payment-wrapper">
                 <h1>Payment method</h1>

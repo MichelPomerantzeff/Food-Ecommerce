@@ -1,7 +1,7 @@
 import Logo from '../logo/Logo';
 import { useSelector } from 'react-redux';
 
-export default function Topbar() {
+export default function PaymentTopbar() {
 
     const cartItems = useSelector(state => state.cart);
 
