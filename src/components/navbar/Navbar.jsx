@@ -71,6 +71,7 @@ export default function Navbar() {
               </div>
               :
               <div className="navbar-link" onClick={() => navigate("/sign-in")}>
+                <User />
                 <span className="navbar-option">Login</span>
               </div>
           }
