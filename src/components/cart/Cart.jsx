@@ -1,6 +1,5 @@
 import "./Cart.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+import CancelRoundedIcon from '@mui/icons-material/CancelRounded';
 import ItemInCart from "./ItemInCart";
 import { useDispatch, useSelector } from "react-redux";
 import { emptyBox } from '../../data/data';
@@ -28,7 +27,7 @@ export default function Cart({ closeCart }) {
         }
         <button onClick={() => closeCart(false)} className="close-cart">
           <span>CLOSE</span>
-          <FontAwesomeIcon className="close-icon" icon={faCircleXmark} />
+          <CancelRoundedIcon className="close-icon" />
         </button>
       </div>
       <div className="items-in-cart">
