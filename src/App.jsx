@@ -41,23 +41,23 @@ function App() {
       element: < LunchBoxPage />,
     },
     {
-      path: "sign-in",
+      path: "/sign-in",
       element: < SignInPage />,
     },
     {
-      path: "sign-up",
+      path: "/sign-up",
       element: < SignUpPage />,
     },
     {
-      path: "payment",
+      path: "/payment",
       element: < PaymentPage />
     },
     {
-      path: "orders",
+      path: "/orders",
       element: < OrdersPage />,
     },
     {
-      path: "completion",
+      path: "/completion",
       element: < Completion />,
     },
   ]);
