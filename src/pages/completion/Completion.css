@@ -25,3 +25,17 @@
     height: 80%;
     font-size: 2rem;
 }
+
+@media (max-width:650px) {
+
+    .back-home {
+        width: 95vw;
+        font-size: .7rem;
+    }
+
+    .thank-you {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width:480px) {}
