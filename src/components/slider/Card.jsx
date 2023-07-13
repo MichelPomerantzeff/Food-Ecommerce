@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { add, remove } from "../../redux/features/cartSlice";
 import './Card.css';
 
-export default function Dish({ dish }) {
+export default function Card({ dish }) {
 
   const cartItems = useSelector(state => state.cart);
   const item = cartItems.cartItems?.find(item => item.id == dish.id);

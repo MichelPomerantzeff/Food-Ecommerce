@@ -1,5 +1,5 @@
 import "./MainCourse.css";
-import Dish from "../slider/Dish";
+import Card from "../slider/Card";
 
 export default function MainCourse({ title, dishes }) {
     return (
@@ -9,7 +9,7 @@ export default function MainCourse({ title, dishes }) {
                 <div className="main-course-category">
                     {dishes.map((dish) => {
                         return (
-                            <Dish key={dish.id} dish={dish} />
+                            <Card key={dish.id} dish={dish} />
                         );
                     })}
                 </div>

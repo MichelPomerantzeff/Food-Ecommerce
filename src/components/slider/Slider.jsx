@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { ArrowBackIosRounded as LeftArrow, ArrowForwardIosRounded as RightArrow } from "@mui/icons-material";
 
 import { useState } from "react";
-import Dish from "./Dish";
+import Card from "./Card";
 import { Link } from "react-router-dom";
 
 export default function Slider(props) {
@@ -50,7 +50,7 @@ export default function Slider(props) {
           {props.dish.map((d) => {
             return (
               <SwiperSlide key={d.id}>
-                <Dish dish={d} />
+                <Card dish={d} />
               </SwiperSlide>
             );
           })}

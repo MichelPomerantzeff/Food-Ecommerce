@@ -1,5 +1,5 @@
 import "./Snacks.css";
-import Dish from "../slider/Dish";
+import Card from "../slider/Card";
 
 export default function Snacks({ title, snacks }) {
     return (
@@ -9,7 +9,7 @@ export default function Snacks({ title, snacks }) {
                 {snacks.map(snack => {
                     return (
                         <div key={snack.id} className="snack-wrapper">
-                            <Dish dish={snack} />
+                            <Card dish={snack} />
                         </div>
                     )
                 })}
