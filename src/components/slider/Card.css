@@ -146,3 +146,15 @@
         padding: 3px;
     }
 }
+
+@media (max-width:480px) {
+
+    .card-bottom-line {
+        flex-direction: column;
+        padding: 10px 5px 5px 5px ;
+    }
+
+    .remove-button button, .add-button button {
+        border-radius: 3px;
+    }
+}
