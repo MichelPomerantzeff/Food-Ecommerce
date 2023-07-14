@@ -22,14 +22,16 @@ React-firebase-hook facilitates the management of user state, keeping track of w
 ## How to use?
 
 #### Download this repository
-#### Add the following keys to the .env file with your own:
+#### Create a .env file and add the following keys to it:
 ```bash
-VITE_FIREBASE_API_KEY = your_own_api_key
+VITE_FIREBASE_API_KEY = your_own_firebase_api_key
 ```
 
 ```bash
 VITE_STRIPE_PUBLISHABLE_KEY = your_own_publishable_key
 ```
+(replace the values from the keys above with your own)
+
 
 ### In the project directory, run the following commands:
 ##### To install dependencies and node_modules:
