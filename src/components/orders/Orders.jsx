@@ -35,7 +35,7 @@ export default function Orders() {
                             <Order key={order.id} order={order} />
                         ))
                         :
-                        <div>
+                        <div className='empty-orders'>
                             You have no orders yet
                         </div>
                 }
