@@ -74,9 +74,11 @@ export default function Footer() {
             </div>
 
             <div className="copyright">
-                &copy; 2023. Built by&ensp;<strong>Michel Pomerantzeff</strong>
+                <span> &copy; 2023. Developed by&ensp; </span>
+                <a href="https://www.michelpomerantzeff.com" target='_blank' rel="noopener noreferrer">
+                    <strong>Michel Pomerantzeff</strong>
+                </a>
             </div>
         </footer>
-
     )
 }
