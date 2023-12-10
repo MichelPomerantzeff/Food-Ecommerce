@@ -1,10 +1,8 @@
 # Food-Ecommerce
 
-![food-ecommerce](https://github.com/MichelPomerantzeff/Food-Ecommerce/assets/96065240/395f478c-7379-450d-8b90-fd85f88243ff)
+![food-ecommerce](./public/e-commerce.png)
 
-# Getting Started with Vite
-
-This project was bootstrapped with [Vite](https://vitejs.dev/guide/).
+### This project was bootstrapped with [Vite](https://vitejs.dev/guide/).
 
 ## 💻 Project
 
@@ -22,13 +20,11 @@ React-firebase-hook facilitates the management of user state, keeping track of w
 ## How to use?
 
 #### Download this repository
+
 #### Create a .env file and add the following keys to it:
 ```bash
-VITE_FIREBASE_API_KEY = your_own_firebase_api_key
-```
-
-```bash
-VITE_STRIPE_PUBLISHABLE_KEY = your_own_publishable_key
+VITE_FIREBASE_API_KEY = your_own_key
+VITE_STRIPE_PUBLISHABLE_KEY = your_own_key
 ```
 (replace the values from the keys above with your own)
 
@@ -42,7 +38,7 @@ npm install
 ##### To start the application:
 
 ```bash
-npm start
+npm run dev
 ```
 ##### To see a live demo of this project, click [here](https://theone-ecommerce.netlify.app/)
 
