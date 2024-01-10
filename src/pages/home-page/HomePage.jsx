@@ -1,4 +1,3 @@
-import Banner from "../../components/banner/Banner";
 import Specials from "../../components/specials/Specials";
 import Slider from "../../components/slider/Slider";
 import Navbar from "../../components/navbar/Navbar";
@@ -7,9 +6,11 @@ import Footer from "../../components/footer/Footer";
 
 export default function HomePage() {
   return (
-    <>
+    <main className="flex flex-col gap-5">
       <Navbar />
-      <Banner banner={banner.home} />
+      <div className="max-w-[95vw] md:w-[90vw] lg:w-[1200px] m-auto">
+        <img src={banner.home} alt="Banner Image" />
+      </div>
       <Specials />
       <Slider title={"CHICKEN"} dish={dishes.chicken} />
       <Slider title={"BEEF"} dish={dishes.beef} />
@@ -17,6 +18,6 @@ export default function HomePage() {
       <Slider title={"VEGETARIAN"} dish={dishes.vegetarian} />
       <Slider title={"FISH"} dish={dishes.fish} />
       <Footer />
-    </>
+    </main>
   );
 }

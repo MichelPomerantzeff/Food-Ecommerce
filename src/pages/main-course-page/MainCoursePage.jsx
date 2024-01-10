@@ -1,5 +1,4 @@
 import Navbar from "../../components/navbar/Navbar";
-import Banner from "../../components/banner/Banner";
 import MainCourse from "../../components/main-course/MainCourse";
 import { banner } from "../../data/data";
 import { dishes } from "../../data/data";
@@ -9,7 +8,9 @@ export default function MainCoursePage() {
   return (
     <>
       <Navbar />
-      <Banner banner={banner.mainCourse} />
+      <div className="banner-wrapper">
+        <img src={banner.mainCourse} alt="Banner Image" />
+      </div>
       <MainCourse title={"CHICKEN"} dishes={dishes.chicken} />
       <MainCourse title={"BEEF"} dishes={dishes.beef} />
       <MainCourse title={"FISH"} dishes={dishes.fish} />

@@ -27,16 +27,25 @@ export default function Specials() {
 
 
   return (
-    <section className="specials">
-      <h2 className="specials-title">Featured</h2>
-      <div className="specials-wrapper">
+    <section className="max-w-[95vw] md:w-[90vw] lg:w-[1200px] m-auto">
+      <h2 className="text-lg font-bold">FEATURED</h2>
+      <div className="grid grid-cols-4 gap-2">
         {specials.map((special) => {
           return (
-            <div key={special.id} className="special-wrapper" onClick={() => handleClick(special.title)}>
-              <div className="special-image-wrapper">
-                <img className="special-img" src={special.image} />
+            <div
+              key={special.id}
+              className="group flex flex-col  border border-gray-300 rounded-md overflow-hidden cursor-pointer"
+              onClick={() => handleClick(special.title)}
+            >
+              <div className="flex h-full overflow-hidden">
+                <img className="group-hover:scale-125 transition-all duration-300" src={special.image} />
               </div>
-              <div className="special-title">{special.title}</div>
+              <div
+                className="text-sm px-1 pb-1 md:text-base whitespace-nowrap overflow-hidden text-ellipsis 
+                font-semibold group-hover:text-blue-400"
+              >
+                {special.title}
+              </div>
             </div>
           );
         })}

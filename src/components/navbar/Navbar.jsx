@@ -7,9 +7,11 @@ import { signOut } from "firebase/auth";
 import Cart from "../cart/Cart";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import Logo from "../logo/Logo";
+import { logo } from "../../data/data";
 import { Badge } from "@mui/material";
-import { ShoppingCartOutlined, MenuBook,InfoOutlined as Info, AccountCircle as User } from "@mui/icons-material";
+import { ShoppingCartOutlined, MenuBook, InfoOutlined as Info, AccountCircle as User } from "@mui/icons-material";
+import MenuDropdown from "./dropdowns/Menu";
+import UserDropdown from "./dropdowns/User";
 
 export default function Navbar() {
 
@@ -25,65 +27,44 @@ export default function Navbar() {
   }
 
   return (
+    <div className="mb-20 md:mb-24 lg:mb-28">
+      <div className="fixed top-0 right-0 left-0 z-20">
 
-    <main className="topbar-container">
+        {isCartOpen && <Cart closeCart={setIsCartOpen} />}
 
-      {isCartOpen && <Cart closeCart={setIsCartOpen} />}
-
-      <div className="offer-highlight">
-        Great Deal! Get 10% off for orders over €50
-      </div>
-
-      <div className="navbar">
-        <div className="navbar-side nav-left">
-
-          <Logo />
-
-          <div className="navbar-link" onClick={() => navigate('/about')}>
-            <Info />
-            <span className="navbar-option">ABOUT</span>
-          </div>
-
-          <div className="navbar-link">
-            <MenuBook />
-            <span className="navbar-option">MENU</span>
-            <ul className="dropdown-box">
-              <li onClick={() => navigate('/main-course')} className="dropdown-option">Main course</li>
-              <li onClick={() => navigate('/healthy')} className="dropdown-option">Healthy options</li>
-              <li onClick={() => navigate('/snacks')} className="dropdown-option">Snacks</li>
-              <li onClick={() => navigate('/lunch-box')} className="dropdown-option">Lunchbox</li>
-            </ul>
-          </div>
+        <div className="bg-blue-400 text-white text-center">
+          Great Deal! Get 10% off for orders over €50
         </div>
 
-        <div className="navbar-side nav-right">
-          {
-            user ?
-              <div className="navbar-link">
-                <User />
-                <span className="navbar-option">{user.email}</span>
+        <div className="flex justify-between items-center px-4 lg:px-10 shadow bg-white">
+          <div className="flex gap-5 lg:gap-10 items-center">
 
-                <ul className="dropdown-box">
-                  <li className="dropdown-option" onClick={() => navigate('/orders')}> Orders history </li>
-                  <li className="dropdown-option" onClick={signUserOut} > Sign out </li>
-                </ul>
+            <div
+              className="w-[65px] lg:w-[75px] cursor-pointer"
+              onClick={() => navigate('/')}
+            >
+              <img className="rounded-full" src={logo} alt="LOGO" />
+            </div>
 
-              </div>
-              :
-              <div className="navbar-link" onClick={() => navigate("/sign-in")}>
-                <User />
-                <span className="navbar-option">Login</span>
-              </div>
-          }
-          <div onClick={() => setIsCartOpen(true)} className="navbar-link">
-            <Badge badgeContent={cartItems.totalItems} color="primary" onClick={() => setIsCartOpen(true)} >
-              <ShoppingCartOutlined />
-            </Badge>
-            <span className="navbar-option">CART</span>
+            <div className="flex items-center cursor-pointer rounded hover:bg-orange-100 p-2" onClick={() => navigate('/about')}>
+              <Info />
+              <span className="font-semibold hidden md:inline">ABOUT</span>
+            </div>
+
+            <MenuDropdown />
+          </div>
+
+          <div className="flex gap-5 lg:gap-10 items-center">
+            <UserDropdown email={user?.email}/>
+            <div onClick={() => setIsCartOpen(true)} className="flex gap-1 cursor-pointer">
+              <Badge badgeContent={cartItems.totalItems} color="primary" onClick={() => setIsCartOpen(true)} >
+                <ShoppingCartOutlined />
+              </Badge>
+              <span className="font-semibold hidden md:inline">CART</span>
+            </div>
           </div>
         </div>
-
       </div>
-    </main>
+    </div>
   );
 }

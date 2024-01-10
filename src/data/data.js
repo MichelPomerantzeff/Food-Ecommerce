@@ -337,7 +337,7 @@ export const banner = {
 
 export const signInBg = "./images/signs/sign-in-bg.png";
 export const signUpBg = "./images/signs/sign-up-bg.png";
-export const logo = "./images/rest-logo.png";
+export const logo = "./images/logo.jpeg";
 export const emptyBox = "./images/empty-box/empty-box.png";
 export const aboutImg = "./images/about-img.png";
 export const appleStore = "./images/download-app-img/apple-store.png";
