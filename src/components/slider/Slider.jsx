@@ -1,6 +1,5 @@
 // Swiper styles
 import "swiper/swiper-bundle.min.css";
-import "./Slider.css";
 
 import { Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";

@@ -1,4 +1,3 @@
-import './Footer.css';
 import { Email, Facebook, Instagram, LocationOn, Phone, Twitter, WhatsApp } from '@mui/icons-material';
 import { appleStore, playStore } from '../../data/data';
 import { Link } from 'react-router-dom';

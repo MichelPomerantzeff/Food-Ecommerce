@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import { specials } from "../../data/data";
-import "./Specials.css";
 
 export default function Specials() {
 

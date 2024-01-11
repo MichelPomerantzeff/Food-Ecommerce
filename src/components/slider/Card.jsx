@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { add, remove } from "../../redux/features/cartSlice";
-import './Card.css';
 
 export default function Card({ dish }) {
 
