@@ -16,6 +16,7 @@ export default function Completion() {
         dispatch((reset()))
     };
 
+    // TODO: Add Tailwind here
     return (
         <div className="completion">
             <Link to={'/'} className='back-home'>GO BACK TO HOME PAGE</Link>

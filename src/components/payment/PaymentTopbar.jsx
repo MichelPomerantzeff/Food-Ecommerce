@@ -5,6 +5,7 @@ export default function PaymentTopbar() {
 
     const cartItems = useSelector(state => state.cart);
 
+    // TODO: Add Tailwind here
     return (
         <div className='topbar'>
             <div className="topbar-content">

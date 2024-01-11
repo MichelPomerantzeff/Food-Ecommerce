@@ -29,6 +29,7 @@ export default function SignUpPage() {
     }
   }
 
+  // TODO: Add Tailwind here
   return (
     <>
       <Navbar />

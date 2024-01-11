@@ -24,6 +24,7 @@ export default function Orders() {
         getOrdersFromDB();
     }, [user]);
 
+    // TODO: Add Tailwind here
     return (
         <div className='orders'>
             <h1>Orders history</h1>

@@ -68,6 +68,7 @@ export default function PaymentForm() {
         setError(e.error ? e.error.message : "");
     };
 
+    // TODO: Add Tailwind here
     return (
         <div className="payment">
             <PaymentTopbar />

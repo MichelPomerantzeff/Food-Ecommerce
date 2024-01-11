@@ -7,6 +7,7 @@ export default function ConfirmItemsList() {
     const [user] = useAuthState(auth);
     const cartItems = useSelector(state => state.cart);
 
+    // TODO: Add Tailwind here
     return (
         <div className='payment-items-list'>
             <p>Hello, {user?.displayName}. Please confirm the amount of items you have added to your cart in the list below before making the payment.</p>
