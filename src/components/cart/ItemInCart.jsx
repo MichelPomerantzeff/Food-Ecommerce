@@ -18,23 +18,32 @@ export default function ItemInCart({ dish }) {
   }
 
   return (
-    <div className="item-in-cart">
-      <div className="item-in-cart-img">
-        <img src={dish.image} alt="Item imgage" />
+    <div className="flex gap-2 p-2">
+      <div className="max-w-28 h-24 rounded-md overflow-hidden ">
+        <img className="h-full w-full object-cover" src={dish.image} alt="" />
       </div>
-      <div className="item-in-cart-field">
-        <div className="item-in-cart-top-line">
-          <h1>{dish.title}</h1>
-          <span>{dish.info}</span>
+      <div className="w-full overflow-hidden">
+        <div className="mb-2">
+          <h1 className="font-bold whitespace-nowrap text-ellipsis overflow-hidden">{dish.title}</h1>
+          <span className="text-sm text-gray-400 font-semibold whitespace-nowrap overflow-hidden 
+              text-ellipsis cursor-default">{dish.info}</span>
         </div>
-        <div className="item-in-cart-bottom-line">
-          <span>€{dish.price.toFixed(2)}</span>
-          <div className="item-in-cart-buttons">
-            <button onClick={() => removeFromCart(dish)} className="remove-btn">
+        <div className="flex justify-between">
+          <span className="flex items-center w-1/3 font-semibold">€{dish.price.toFixed(2)}</span>
+          <div className="flex items-center justify-around w-2/3">
+            <button
+              onClick={() => removeFromCart(dish)}
+              className="border-2 border-gray-200 rounded px-2 text-blue-400
+              hover:border-blue-400 transition"
+            >
               <FontAwesomeIcon icon={faMinus} />
             </button>
             <span>{dish.units}</span>
-            <button onClick={() => addToCart(dish)} className="add-btn">
+            <button
+              onClick={() => addToCart(dish)}
+              className="border-2 border-blue-400 rounded px-2 text-blue-400
+              hover:bg-blue-400 hover:text-white transition"
+            >
               <FontAwesomeIcon icon={faPlus} />
             </button>
           </div>
