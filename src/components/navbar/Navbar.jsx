@@ -12,6 +12,7 @@ import { Badge } from "@mui/material";
 import { ShoppingCartOutlined, MenuBook, InfoOutlined as Info, AccountCircle as User } from "@mui/icons-material";
 import MenuDropdown from "./dropdowns/Menu";
 import UserDropdown from "./dropdowns/User";
+import Logo from "../logo/Logo";
 
 export default function Navbar() {
 
@@ -36,15 +37,10 @@ export default function Navbar() {
           Great Deal! Get 10% off for orders over €50
         </div>
 
-        <div className="flex justify-between items-center px-4 lg:px-10 shadow bg-white">
+        <div className="flex justify-between items-center px-4 py-1 lg:px-10 shadow bg-white">
           <div className="flex gap-5 lg:gap-10 items-center">
 
-            <div
-              className="w-[65px] lg:w-[75px] cursor-pointer"
-              onClick={() => navigate('/')}
-            >
-              <img className="rounded-full" src={logo} alt="LOGO" />
-            </div>
+            <Logo/>
 
             <div className="flex items-center cursor-pointer rounded hover:bg-orange-100 p-2" onClick={() => navigate('/about')}>
               <Info />

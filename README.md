@@ -1,6 +1,6 @@
 # Food-Ecommerce
 
-![food-ecommerce](./public/e-commerce.png)
+![food-ecommerce](./public/images/readme/e-commerce.png)
 
 ### This project was bootstrapped with [Vite](https://vitejs.dev/guide/).
 
