@@ -6,9 +6,9 @@ import Footer from "../../components/footer/Footer";
 
 export default function MainCoursePage() {
   return (
-    <>
+    <main className="flex flex-col gap-5">
       <Navbar />
-      <div className="banner-wrapper">
+      <div className="max-w-[95vw] md:w-[90vw] lg:w-[1200px] m-auto">
         <img src={banner.mainCourse} alt="Banner Image" />
       </div>
       <MainCourse title={"CHICKEN"} dishes={dishes.chicken} />
@@ -17,6 +17,6 @@ export default function MainCoursePage() {
       <MainCourse title={"PASTA"} dishes={dishes.pasta} />
       <MainCourse title={"VEGETARIAN"} dishes={dishes.vegetarian} />
       <Footer />
-    </>
+    </main>
   );
 }
