@@ -1,19 +1,16 @@
-import "./Snacks.css";
 import Card from "../slider/Card";
 
 export default function Snacks({ title, snacks }) {
     return (
-        <div className="snacks">
-            <h2 className="snack-title">{title}</h2>
-            <div className="snacks-wrapper">
+        <div className="p-3">
+            <h2 className="font-bold mb-2">{title}</h2>
+            <div className="grid grid-cols-2 gap-2">
                 {snacks.map(snack => {
                     return (
-                        <div key={snack.id} className="snack-wrapper">
-                            <Card dish={snack} />
-                        </div>
-                    )
+                        <Card key={snack} dish={snack} />
+                    );
                 })}
             </div>
         </div>
-    )
+    );
 }
