@@ -1,6 +1,5 @@
 // Swiper styles
 import "swiper/swiper-bundle.min.css";
-import "./Slider.css";
 
 import { Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -22,20 +21,21 @@ export default function Slider(props) {
   };
 
   return (
-    <div className="slider">
-      <div className="slider-wrapper">
-        <div className="slider-header">
-          <div className="slider-title">
-            <h2>{props.title}</h2>
-            <Link to={'/main-course'}>SHOW ALL</Link>
+      <div className="max-w-[95vw] md:w-[90vw] lg:w-[1200px] m-auto">
+        <div className="flex justify-between p-1">
+          <div className="flex gap-2 items-center">
+            <h2 className="text-lg font-bold">{props.title}</h2>
+            <Link to={'/main-course'}>
+              <span className="text-xs text-blue-400 font-semibold hover:underline">SHOW ALL</span>
+            </Link>
           </div>
           {props.dish.length > 2 && (
-            <div className="slider-header-buttons">
-              <button className="arrow-btn" onClick={prevo}>
-                <LeftArrow className="left-btn"/>
+            <div className="flex gap-4">
+              <button className="group border-2 border-gray-300 rounded px-2 hover:border-blue-400" onClick={prevo}>
+                <LeftArrow className="scale-[.7] group-hover:text-blue-400"/>
               </button>
-              <button className="arrow-btn" onClick={nexto}>
-                <RightArrow className="right-btn"/>
+              <button className="group border-2 border-gray-300 rounded px-2 hover:border-blue-400" onClick={nexto}>
+                <RightArrow className="scale-[.7] group-hover:text-blue-400"/>
               </button>
             </div>
           )}
@@ -56,6 +56,5 @@ export default function Slider(props) {
           })}
         </Swiper>
       </div>
-    </div>
   );
 }

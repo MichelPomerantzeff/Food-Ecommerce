@@ -1,12 +1,12 @@
 # Food-Ecommerce
 
-![food-ecommerce](./public/e-commerce.png)
+![food-ecommerce](./public/images/readme/e-commerce.png)
 
 ### This project was bootstrapped with [Vite](https://vitejs.dev/guide/).
 
 ## 💻 Project
 
-React-firebase-hook facilitates the management of user state, keeping track of when they are logged in or logged out. Stripe API deals with creating and accepting card payment sources. Firebase for relational database schema allows for easy retrieval of product and order data.
+A Full-Stack e-commerce that allows users to create authenticated accounts, manage cart items, execute card payments, and keep track of their order history.
 
 ## 🚀 Stack & Tools Used:
 - React.js

@@ -1,8 +1,7 @@
 import { useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import { signUpBg } from "../../data/data";
-import { Link, useNavigate } from "react-router-dom";
-import '../../css/UserLog.css';
+import { useNavigate } from "react-router-dom";
 import { auth } from "../../config/firebase";
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import Footer from "../../components/footer/Footer";
@@ -19,7 +18,7 @@ export default function SignUpPage() {
   // Create User
   const registerWithEmail = async () => {
     try {
-      const result = await createUserWithEmailAndPassword(auth, email, password);
+      const result = await createUserWithEmailAndPassword(auth, email, password, confirmPassword);
       // Sign in
       const user = result.user;
       await updateProfile(user, { displayName: name });
@@ -32,29 +31,62 @@ export default function SignUpPage() {
   return (
     <>
       <Navbar />
-      <section className="sign">
-        <div className="sign-left">
-          <div className="sign-wrapper">
-            <h1> CREATE AN ACCOUNT AND LET'S GET STARTED </h1>
-            <form>
-              <div className="inputs-wrapper">
-                <input onChange={e => setName(e.target.value)} type="text" name="name" id="name" placeholder="Name" required />
-                <input onChange={e => setEmail(e.target.value)} type="email" name="email" id="email" placeholder="Email" required />
-                <input onChange={e => setPassword(e.target.value)} type="password" name="pasword" id="pasword" placeholder="Password" required />
-                <input onChange={e => setConfirmPassword(e.target.value)} type="password" name="confirm-password" id="confirm-password" placeholder="Confirm password" required />
-              </div>
+      <section className="lg:flex lg:justify-between lg:items-center">
+        <div className="flex justify-center py-28 lg:p-0 lg:w-full">
+          <div className="w-[80vw] sm:w-1/2 max-w-[400px]">
+            <h1 className="text-[1.5rem] font-bold mb-6"> CREATE AN ACCOUNT AND LET'S GET STARTED </h1>
+            <form className="flex flex-col gap-3">
+              <input
+                className="pb-2 outline-none border-b-2 border-gray-300 hover:border-gray-400
+                focus:border-gray-500"
+                onChange={e => setName(e.target.value)}
+                type="text"
+                name="name" id="name" placeholder="Name"
+                required
+              />
+              <input
+                className="pb-2 outline-none border-b-2 border-gray-300 hover:border-gray-400
+                focus:border-gray-500"
+                onChange={e => setEmail(e.target.value)}
+                type="email"
+                name="email" id="email" placeholder="Email"
+                required
+              />
+              <input
+                className="pb-2 outline-none border-b-2 border-gray-300 hover:border-gray-400
+                focus:border-gray-500"
+                onChange={e => setPassword(e.target.value)}
+                type="password"
+                name="pasword" id="pasword" placeholder="Password"
+                required
+              />
+              <input
+                className="pb-2 outline-none border-b-2 border-gray-300 hover:border-gray-400
+                focus:border-gray-500"
+                onChange={e => setConfirmPassword(e.target.value)}
+                type="password"
+                name="confirm-password" id="confirm-password" placeholder="Confirm password"
+                required
+              />
+              <button
+                className="bg-gray-200 rounded font-semibold py-2 hover:bg-gray-300"
+                onClick={registerWithEmail}
+                type="submit"
+              >
+                CREATE
+              </button>
+              <button
+                className="border-2 border-blue-400 rounded text-blue-400 font-semibold py-2
+              hover:bg-blue-400 hover:text-white transition"
+                onClick={() => navigate('/sign-in')}
+              >
+                I ALREADY HAVE AN ACCOUNT
+              </button>
             </form>
-
-            <div className="buttons-wrapper">
-              <button onClick={registerWithEmail} className="sign-btn" type="submit"> CREATE </button>
-              <Link to={'/sign-in'}>
-                <button className="create-account-btn">I ALREADY HAVE AN ACCOUNT</button>
-              </Link>
-            </div>
           </div>
         </div>
 
-        <div className="sign-right">
+        <div className="hidden lg:block lg:w-full">
           <img src={signUpBg} alt="REGISTER IMAGE" />
         </div>
       </section>
