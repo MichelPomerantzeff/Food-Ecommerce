@@ -5,19 +5,18 @@ export default function PaymentTopbar() {
 
     const cartItems = useSelector(state => state.cart);
 
-    // TODO: Add Tailwind here
     return (
-        <div className='topbar'>
-            <div className="topbar-content">
+        <div className='bg-rose-600 py-2 px-5'>
+            <div className="flex justify-between items-center max-w-[1200px] m-auto">
                 <Logo />
-            </div>
-            <div className="topbar-content">
-                <span>
-                    You have <strong style={{ textDecoration: 'underline' }}>{cartItems.totalItems} {cartItems.totalItems > 1 ? 'items' : 'item'}</strong> in your cart
-                </span>
-            </div>
-            <div className="topbar-content">
-                <span>Total: €{(cartItems.totalPrice - (cartItems.totalPrice * cartItems.discount)).toFixed(2)}</span>
+                <div className="text-white">
+                    <span>
+                        You have <span className='font-bold underline'>{cartItems.totalItems} {cartItems.totalItems > 1 ? 'items' : 'item'}</span> in your cart
+                    </span>
+                </div>
+                <div className="font-bold  text-white">
+                    <span>Total: €{(cartItems.totalPrice - (cartItems.totalPrice * cartItems.discount)).toFixed(2)}</span>
+                </div>
             </div>
         </div>
     )
