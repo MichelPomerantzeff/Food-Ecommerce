@@ -3,7 +3,7 @@ import { aboutImg } from "../../data/data";
 export default function About() {
     return (
         <section className="">
-            <div className=" bg-rose-600 text-white pt-5 pb-32 md:pt-10 md:pb-40">
+            <div className=" bg-rose-600 text-white pt-5 pb-32 md:pt-10 md:pb-40 -mt-3 md:-mt-5 lg:-mt-9">
                 <h1 className="max-w-[800px] m-auto text-center text-[1.4rem] md:text-[1.6rem] lg:text-[2rem] font-bold px-5 mb-5">THE MISSING SOLUTION IN YOUR DAILY ROUTINE</h1>
                 <p className="lg:max-w-[800px] md:max-w-[650px] m-auto text-center px-5">
                     If you appreciate the fusion of delectable and nutritious cuisine

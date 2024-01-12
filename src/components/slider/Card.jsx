@@ -21,7 +21,7 @@ export default function Card({ dish }) {
 
   return (
     <>
-      <div className="border border-gray-300 rounded">
+      <div className="border border-gray-300 rounded bg-white">
         <div className="">
           <img src={dish.image} alt="Card image" />
         </div>
