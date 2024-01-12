@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import './Payment.css';
 import { PaymentElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import { useSelector } from 'react-redux';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -68,28 +67,29 @@ export default function PaymentForm() {
         setError(e.error ? e.error.message : "");
     };
 
-    // TODO: Add Tailwind here
     return (
-        <div className="payment">
+        <div className="">
             <PaymentTopbar />
             <ConfirmItemsList />
-            <div className="payment-wrapper">
-                <h1>Payment method</h1>
-                <form onSubmit={handleSubmit}>
+            <h1 className='text-[1.5rem] font-bold text-center mb-10'>Payment method</h1>
+            <form
+                className='max-w-[600px] w-[90vw] m-auto border border-gray-200 p-4 rounded'
+                onSubmit={handleSubmit}
+            >
+                <PaymentElement onChange={handleChange} />
+                {error && <div>{error}</div>}
+                <button
+                    className={`mt-3 font-semibold w-full rounded p-2
+                    ${disabled ? 'border-2 border-gray-200 text-gray-300'
+                            : 'border-2 border-blue-400 text-blue-400 cursor-pointer hover:bg-blue-400 hover:text-white transition'}`}
+                    disabled={processing || disabled || succeeded}
+                >
+                    <span>
+                        {processing ? <p>PROCESSING...</p> : `PAY €${(cartItems.totalPrice - (cartItems.totalPrice * cartItems.discount)).toFixed(2)}`}
+                    </span>
+                </button>
+            </form>
 
-                    <PaymentElement onChange={handleChange} />
-
-                    {error && <div>{error}</div>}
-                    <button
-                        className={`${disabled ? 'disabled-btn' : 'primary-btn'}`}
-                        disabled={processing || disabled || succeeded}
-                    >
-                        <span>
-                            {processing ? <p>PROCESSING...</p> : `PAY €${(cartItems.totalPrice - (cartItems.totalPrice * cartItems.discount)).toFixed(2)}`}
-                        </span>
-                    </button>
-                </form>
-            </div>
         </div>
     );
-};
+}
