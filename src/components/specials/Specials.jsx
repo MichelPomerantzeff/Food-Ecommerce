@@ -33,7 +33,7 @@ export default function Specials() {
           return (
             <div
               key={special.id}
-              className="group flex flex-col  border border-gray-300 rounded-md overflow-hidden cursor-pointer"
+              className="group flex flex-col shadow rounded-md overflow-hidden cursor-pointer"
               onClick={() => handleClick(special.title)}
             >
               <div className="flex h-full overflow-hidden">

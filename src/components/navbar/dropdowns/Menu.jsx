@@ -19,7 +19,7 @@ export default function MenuDropdown() {
     };
 
     return (
-        <div className={`cursor-pointer rounded hover:bg-orange-100 ${open ? "bg-orange-100": ""}`}>
+        <div className={`cursor-pointer rounded-md hover:bg-orange-100 ${open ? "bg-orange-100": ""}`}>
             <Button
                 id="basic-button"
                 aria-controls={open ? 'basic-menu' : undefined}
@@ -45,7 +45,6 @@ export default function MenuDropdown() {
                 <MenuItem onClick={() => navigate('/healthy')} className="dropdown-option">Healthy options</MenuItem>
                 <MenuItem onClick={() => navigate('/snacks')} className="dropdown-option">Snacks</MenuItem>
                 <MenuItem onClick={() => navigate('/lunch-box')} className="dropdown-option">Lunchbox</MenuItem>
-
             </Menu>
         </div>
     );

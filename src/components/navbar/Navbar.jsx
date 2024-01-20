@@ -25,7 +25,7 @@ export default function Navbar() {
 
             <Logo/>
 
-            <div className="flex items-center cursor-pointer rounded hover:bg-orange-100 p-2" onClick={() => navigate('/about')}>
+            <div className="flex items-center cursor-pointer rounded-md hover:bg-orange-100 p-[7px]" onClick={() => navigate('/about')}>
               <Info />
               <span className="font-semibold hidden md:inline">ABOUT</span>
             </div>
