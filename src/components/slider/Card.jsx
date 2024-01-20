@@ -20,8 +20,8 @@ export default function Card({ dish }) {
   };
 
   return (
-    <>
-      <div className="border border-gray-300 rounded bg-white">
+    <div className="p-[2px]">
+      <div className="shadow rounded bg-white">
         <div className="">
           <img src={dish.image} alt="Card image" />
         </div>
@@ -74,6 +74,6 @@ export default function Card({ dish }) {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
